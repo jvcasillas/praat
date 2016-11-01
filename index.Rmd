@@ -16,7 +16,7 @@ links = paste0("- ",
   "[", basename(slides), "]", "(", slides, "/index.html)"
 )
 last <- length(links)
-last2 <- length(links) - 1
+last2 <- length(links)
 writeLines(links[-c(1, 2, last, last2)])
 ```
 

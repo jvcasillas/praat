@@ -1,6 +1,6 @@
 ---
 title       : Working in Praat
-subtitle    : Measuring Voice Onset Time
+subtitle    : Recording and opening soud files
 lecnum      : "00"
 author      : Joseph V. Casillas
 job         : "Rutgers University: Last updated: 'r Sys.Time()"
