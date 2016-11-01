@@ -15,9 +15,9 @@ slides = dir('slides', full = TRUE)
 links = paste0("- ", 
   "[", basename(slides), "]", "(", slides, "/index.html)"
 )
-last <- length(links)
-last2 <- length(links)
-writeLines(links[-c(1, 2, last, last2)])
+total <- length(links)
+keep <- total - 2
+writeLines(links[1:keep])
 ```
 
 </br> 
