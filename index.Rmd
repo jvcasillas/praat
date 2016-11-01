@@ -1,74 +1,12 @@
 ---
-title       : 'Fonética y fonología españolas'
-author      : 'Profesor: Joseph V. Casillas'
+title       : 'Praat'
+author      : 'Joseph V. Casillas'
 hitheme     : solarized_light
 mode        : selfcontained
-github      : {user: jvcasill, repo: 362_01_f2016, branch: gh-pages}
+github      : {user: jvcasill, repo: praat, branch: gh-pages}
 ---
 
-#### *Horario: lunes y jueves, 09:15 - 10:35*
-
-#### *Lugar: HCK 210*
-
-----
-
-</br> 
-
-## Acerca de la asignatura
-
-El objetivo primordial de este curso consiste en ayudar al hablante nativo de 
-inglés a mejorar su pronunciación del español. Se intentará cumplir el 
-mencionado objetivo creando conciencia en el estudiante de cómo funciona el 
-sistema fonológico del español a varios niveles: a través de un mejor 
-entendimiento de los conceptos fonéticos y fonológicos relevantes, de la 
-aplicación de dichos conceptos mediante ejercicios de transcripción escrita y 
-producción oral y del reconocimiento de rasgos fonéticos y fonológicos en el 
-español hablado, todo ello sin olvidar el importante papel desempeñado por la 
-variación dialectal. El curso proporciona al estudiante el ambiente relajado y 
-de apoyo que es necesario para reducir al máximo las inhibiciones y obstáculos 
-que a menudo se interponen a la práctica de la pronunciación.
-
-</br> 
-
-## Material didáctico
-
-### Programa de la asignatura
-
-Haz click [aquí](http://www.jvcasillas.com/362_01_f2016/slides/00_programa/index.html) para 
-consultar el programa de la asignatura. Para una versión descargable, 
-haz click [aquí](http://www.jvcasillas.com/362_01_f2016/libraries/assets/programa/index.pdf).
-
-</br> 
-
-### Temario
-
-Nota: el siguiente temario es provisional. El objetivo es proporcionar una 
-visión de conjunto de los temas a tratar y de las fechas aproximadas. A medida 
-que avancemos en el curso, iremos proporcionando detalles y fechas más exactas 
-más adecuadas al ritmo de la clase.
-
-|   Semana  |        Fecha         |                             Tema                             |
-| :-------- | :------------------- | :----------------------------------------------------------- |
-| Semana 1  | **05**/**09**, 08/09 | Intro al curso. Grabaciones                                  |
-| Semana 2  | 12/09, 15/09         | La sílaba. Diptongos. Hiatos.                                |
-| Semana 3  | 19/09, 22/09         | Consonantes [J] y [w]. Diptongos y semivocales.              |
-| Semana 4  | 26/09, 29/09         | Sílabas, vocales y ritmo. Vocales en contacto. Schwa.        |
-| Semana 5  | 03/10, 06/10         | Prueba 1, Fonética articulatoria: vocales.                   |
-| Semana 6  | 10/10, 13/10         | Fonética articulatoria: consonantes.                         |
-| Semana 7  | 17/10, 20/10         | El fonema. Transcripción fonética.                           |
-| Semana 8  | 24/10, 27/10         | Prueba 2, Oclusivas sordas, africadas.                       |
-| Semana 9  | 31/10, 03/11         | Obstruyentes sonoras /b, d, g/ y /J/                         |
-| Semana 10 | 07/11, 10/11         | Fricativas: /f, s, x/                                        |
-| Semana 11 | 14/11, 17/11         | Nasales y laterales                                          |
-| Semana 12 | 21/11, **24**/**11** | Prueba 3, Vibrantes. La entonación, Día de acción de gracias |
-| Semana 13 | 28/11, 01/12         | El español penínsular y el español americano                 |
-| Semana 14 | 05/12, 08/12         | El español de EEUU. Grabaciones.                             |
-| Semana 15 | 12/12                | Prueba 4                                                     |
-
-
-</br> 
-
-## Presentaciones
+## Slides
 
 ```{r echo = F, results = 'asis'}
 slides = dir('slides', full = TRUE)
@@ -85,7 +23,7 @@ writeLines(links[-c(1, 2, last, last2)])
 
 ## Misc
 
-### Enlaces
+### Links
 
 - [Phonetics flash cards](https://quizlet.com/93374714/fonetica-flash-cards/)
 - Los sonidos del habla - Universidad de Iowa ([inglés](http://soundsofspeech.uiowa.edu/english/english.html), [español](http://soundsofspeech.uiowa.edu/spanish/spanish.html))
@@ -96,7 +34,7 @@ writeLines(links[-c(1, 2, last, last2)])
 
 </br> 
 
-### Artículos
+### Articles
 
 - [So you know a linguist](http://www.slideshare.net/Jayelem/so-you-know-a-linguist)
 - El español de EE.UU.
@@ -105,7 +43,7 @@ writeLines(links[-c(1, 2, last, last2)])
 </br> 
 
 
-## Referencias
+## References
 
 ```{r, eval=TRUE, echo=FALSE, cache=FALSE}
 library(RefManageR)
