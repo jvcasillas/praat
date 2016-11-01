@@ -1501,3 +1501,8 @@ aside.gdbar img {
     font-family: monospace !important;
   }
 }
+
+pSpecial {
+  font-size: 100%;
+  color: #707070;
+}
