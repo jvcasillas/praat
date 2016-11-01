@@ -71,7 +71,7 @@ url         : {lib: "../../libraries", assets: "../../libraries/assets"}
 ## Record a sound object
 
 <div align="center">
-  <img src="./assets/img/praatNewobject.png">
+  <img src="./assets/img/praatNewobject1.png">
 </div>
 
 ---
@@ -90,11 +90,33 @@ url         : {lib: "../../libraries", assets: "../../libraries/assets"}
   <img src="./assets/img/praatSave.png">
 </div>
 
+--- .segue bg:grey
+
+# Importing sound files
+
 ---
 
+## Importing sound files
 
+<div align="center">
+  <img src="./assets/img/praatOpen.png">
+</div>
 
+--- 
 
+## Importing sound files
 
+<div align="center">
+  <img src="./assets/img/praatNewobject2.png">
+</div>
 
+--- 
+
+## View a sound object
+
+<div align="center">
+  <img src="./assets/img/praatPaper.png">
+</div>
+
+---
 

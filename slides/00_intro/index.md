@@ -4,7 +4,7 @@ subtitle    : "Recording, opening and saving sound files"
 lecnum      : "00"
 author      : "Joseph V. Casillas, PhD"
 affiliation : "Rutgers University"
-date        : "2016-11-01 13:16:17"
+date        : "2016-11-01 13:22:51"
 github      : {user: jvcasill, repo: praat}
 framework   : io2012
 highlighter : highlight.js  
@@ -71,7 +71,7 @@ url         : {lib: "../../libraries", assets: "../../libraries/assets"}
 ## Record a sound object
 
 <div align="center">
-  <img src="./assets/img/praatNewobject.png">
+  <img src="./assets/img/praatNewobject1.png">
 </div>
 
 ---
@@ -90,11 +90,33 @@ url         : {lib: "../../libraries", assets: "../../libraries/assets"}
   <img src="./assets/img/praatSave.png">
 </div>
 
+--- .segue bg:grey
+
+# Importing sound files
+
 ---
 
+## Importing sound files
 
+<div align="center">
+  <img src="./assets/img/praatOpen.png">
+</div>
 
+--- 
 
+## Importing sound files
 
+<div align="center">
+  <img src="./assets/img/praatNewobject2.png">
+</div>
 
+--- 
+
+## View a sound object
+
+<div align="center">
+  <img src="./assets/img/praatPaper.png">
+</div>
+
+---
 
