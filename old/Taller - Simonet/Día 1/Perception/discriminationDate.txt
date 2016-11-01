@@ -1,0 +1,32 @@
+"ooTextFile"
+"ExperimentMFC 5"
+stimuli are sounds? <yes>
+name head "SOUNDS/"
+name tail ".wav"
+carrier phrase "" ""
+initial silence duration 0.5
+medial silence duration 0.8 seconds ! inter-stimulus interval
+number of different stimuli 37
+    "date01,date01" "" "date01,date02" "" "date01,date03" "" "date01,date04" ""
+    "date02,date01" "" "date02,date02" "" "date02,date03" "" "date02,date04" "" "date02,date05" ""
+    "date03,date01" "" "date03,date02" "" "date03,date03" "" "date03,date04" "" "date03,date05" "" "date03,date06" ""
+    "date04,date01" "" "date04,date02" "" "date04,date03" "" "date04,date04" "" "date04,date05" "" "date04,date06" "" "date04,date07" ""
+    "date05,date02" "" "date05,date03" "" "date05,date04" "" "date05,date05" "" "date05,date06" "" "date05,date07" ""
+    "date06,date03" "" "date06,date04" "" "date06,date05" "" "date06,date06" "" "date06,date07" ""
+    "date07,date04" "" "date07,date05" "" "date07,date06" "" "date07,date07" ""
+number of replications 3
+break after every 50
+randomize <PermuteBalancedNoDoublets>
+startText "Click to start"
+runText "Same or different"
+pauseText "You can have a short break if you like. Click to proceed"
+endText "The experiment has finished. Thank you"
+number of replays 0
+replay button 0 0 0 0 "" ""
+ok button 0 0 0 0 "" ""
+oops button 0 0 0 0 "" ""
+responses are sounds? <no> "" "" "" "" 0 0
+number of different reponses = 2
+    0.1 0.4 0.35 0.65 "same" 30 "" "same"
+    0.6 0.9 0.35 0.65 "different" 30 "" "different"
+number of goodnes categories = 0

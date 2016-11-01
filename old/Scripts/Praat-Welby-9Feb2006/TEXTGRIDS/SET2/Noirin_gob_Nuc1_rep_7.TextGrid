@@ -1,0 +1,89 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 1.269501133786848 
+tiers? <exists> 
+size = 6 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "misc" 
+        xmin = 0 
+        xmax = 1.269501133786848 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.269501133786848 
+            text = "" 
+    item [2]:
+        class = "TextTier" 
+        name = "tones" 
+        xmin = 0 
+        xmax = 1.269501133786848 
+        points: size = 3 
+        points [1]:
+            time = 0.8052975534389152 
+            mark = "l" 
+        points [2]:
+            time = 1.0565955026388238 
+            mark = "H" 
+        points [3]:
+            time = 1.2472505668934242 
+            mark = "L" 
+    item [3]:
+        class = "IntervalTier" 
+        name = "phonological" 
+        xmin = 0 
+        xmax = 1.269501133786848 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.269501133786848 
+            text = "" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "rhythmic" 
+        xmin = 0 
+        xmax = 1.269501133786848 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.269501133786848 
+            text = "" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "syllables" 
+        xmin = 0 
+        xmax = 1.269501133786848 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.7427715530656707 
+            text = "" 
+        intervals [2]:
+            xmin = 0.7427715530656707 
+            xmax = 0.8559607793734778 
+            text = "sp1" 
+        intervals [3]:
+            xmin = 0.8559607793734778 
+            xmax = 1.003263097446771 
+            text = "s1" 
+        intervals [4]:
+            xmin = 1.003263097446771 
+            xmax = 1.249520030234316 
+            text = "s2" 
+        intervals [5]:
+            xmin = 1.249520030234316 
+            xmax = 1.269501133786848 
+            text = "" 
+    item [6]:
+        class = "IntervalTier" 
+        name = "orthographic" 
+        xmin = 0 
+        xmax = 1.269501133786848 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.269501133786848 
+            text = "" 

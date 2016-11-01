@@ -1,0 +1,40 @@
+form Enter information
+	comment Directory where texts are kept:
+ 	sentence dirFiles /Users/simonet/Desktop/WorkshopArizona/Scripting/SOUNDS
+endform
+
+Create Strings as file list... Grids 'dirFiles$'/*.TextGrid
+select Strings Grids
+clearinfo
+numberOfFiles = Get number of strings
+
+printline sentence'tab$'category'tab$'stress'tab$'word'tab$'duration'tab$'pitch1'tab$'pitch2
+
+for i to numberOfFiles
+	select Strings Grids
+	gridName$ = Get string... i
+	Read from file... 'dirFiles$'/'gridName$'
+	name$ = gridName$ - ".TextGrid"
+	category$ = Get label of interval... 2 1
+	stress$ = Get label of interval... 1 1
+	word$ = Get label of interval... 4 1
+	start = Get start point... 3 2
+	end = Get end point... 3 2
+	duration = end - start
+
+	Read from file... 'dirFiles$'/'name$'.wav
+	To Pitch... 0 50 500
+
+	time0 = (start + end) / 2
+	time1 = (start + time0) / 2
+	time2 = (time0 + end) / 2
+	
+	printline 'start:1''tab$''end:1''tab$''duration:2''tab$''time1:2''tab$''time0:2''tab$''time2:3'
+	
+	pitch1 = Get value at time... time1 ERB Linear
+	pitch2 = Get value at time... time2 ERB Linear
+
+	#printline 'name$''tab$''category$''tab$''stress$''tab$''word$''tab$''duration:2''tab$''pitch1:2''tab$''pitch2:2'
+	select TextGrid 'name$'
+	Remove
+endfor

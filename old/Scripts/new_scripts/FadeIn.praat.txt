@@ -1,0 +1,156 @@
+######################################################################
+#### Robert Felty <robfelty - umich.edu>
+#### 2005
+#### This script comes with no warranty. Use at your own risk
+
+#### This script performs a fade in on the selected part of the stimulus, starting 
+#### at the beginning of the selected portion, and stops at the midpoint of the 
+#### selected portion, at which point it reaches the average intensity of the 
+#### selected portion.
+#### It then writes out the faded in sound to a new file
+######################################################################
+
+##gets user input
+form phoneme input
+ # comment Are you modifying a fricative or aspiration/burst/sonorant?
+  #choice phoneme rename_only
+#    button fricative
+ #   button aspiration/burst/sonorant
+  #  button rename_only
+  comment please enter the new filename, and select the portion to be faded in
+ word filename M1
+#  choice vowel a
+ #   button a
+#    button i
+#    button u
+endform
+##comment If you selected aspiration/burst, please enter the avg vowel intensity
+##real avg_vowel_intensity 0
+###uses selected sound.  A portion must be highlighted
+#if phoneme <3
+phoneme = 2
+use_sound$ = selected$ ("Sound")
+
+###get info about selection to use for filter
+editor Sound 'use_sound$'
+  avg_intensity = Get intensity
+  begin = Get begin of selection
+  end = Get end of selection
+  new_end = end + 0.05
+  duration = Get selection length
+  filter_start_point = begin+(duration*0.5)
+  filter_half_point = begin + 0.01
+  asp_start_point = begin + (duration*0.3)
+  pre_burst_point = begin - (duration*0.1)
+endeditor
+#endif
+
+
+###do this for fricatives
+if phoneme = 1
+####these lines print to the info window to make sure the script is working correctly; can delete later
+
+half_intensity=0.5*avg_intensity
+  Create IntensityTier... fric_decay begin end
+  Edit
+  editor IntensityTier fric_decay
+  Add point at... pre_burst_point avg_intensity
+    
+  Add point at... filter_half_point half_intensity
+    Add point at... end 0
+  endeditor
+
+  select Sound 'use_sound$'
+  plus IntensityTier fric_decay
+  Multiply
+  Edit
+new_sound$ = selected$("Sound")
+ select IntensityTier fric_decay
+  Remove
+select Sound 'new_sound$'
+Play
+endif
+
+###do this for aspiration/burst
+if phoneme = 2
+##create new intensity levels
+  new_intensity = avg_intensity - 5
+  intensity_100= avg_intensity*0.99
+  intensity_90= avg_intensity*0.98
+  intensity_80=avg_intensity*0.96
+  intensity_70=avg_intensity*0.92
+  intensity_60=avg_intensity*0.84
+  intensity_50=avg_intensity*0.68
+  intensity_40=avg_intensity*0.46
+  intensity_30=avg_intensity*0.3
+  intensity_20=avg_intensity*0.2
+  intensity_10=0
+##create time steps
+  time10=begin + 0.3*duration
+time20=begin + 0.35*duration
+time30=begin + 0.4*duration
+time40=begin + 0.48*duration
+time50=begin + 0.56*duration
+time60=begin + 0.63*duration
+time70=begin + 0.70*duration
+time80=begin + 0.76*duration
+time90=begin + 0.82*duration
+###time10=begin + 0.1*duration
+
+#########
+  
+  Create IntensityTier... asp_decay begin end
+  Edit
+  editor IntensityTier asp_decay
+#    Add point at... pre_burst_point avg_intensity
+#   Add point at... asp_start_point new_intensity
+#  Add point at... filter_start_point 40
+  Add point at... begin 0
+  Add point at... time10 intensity_10
+  Add point at... time20 intensity_20
+  Add point at... time30 intensity_30
+  Add point at... time40 intensity_40
+  Add point at... time50 intensity_50
+  Add point at... time60 intensity_60
+  Add point at... time70 intensity_70
+  Add point at... time80 intensity_80
+  Add point at... time90 intensity_90
+
+  
+
+  Add point at... end avg_intensity
+  endeditor
+  select Sound 'use_sound$'
+  plus IntensityTier asp_decay
+  Multiply
+  Edit
+new_sound$ = selected$("Sound")
+#editor Sound 'new_sound$'
+  #Select... new_end 2
+# Cut
+#endeditor
+ select IntensityTier asp_decay
+  Remove
+select Sound 'new_sound$'
+Play
+endif
+
+##Rename file and write to WAV
+
+
+Rename... 'filename$'
+write_dir$ = "edited"
+
+
+
+  Write to WAV file... 'write_dir$''filename$'.wav
+
+
+###print info for debuggin
+
+printline phoneme = 'phoneme' 'tab$' filename='filename$'
+##printline Average Vowel Intensity = 'avg_vowel_intensity'
+##printline filename='filename$'
+printline  start 'tab$' end 'tab$'  duration 'tab$' filter start point 'tab$' average intensity
+printline 'begin:4' 'tab$' 'end:4' 'tab$' 'duration:4' 'tab$' 'filter_start_point:4' 'tab$' 'avg_intensity:4'
+##printline new end= 'new_end:4'

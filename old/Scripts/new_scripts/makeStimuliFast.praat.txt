@@ -1,0 +1,123 @@
+######################################################################
+#### Robert Felty <robfelty - umich.edu>
+#### 2005
+#### This script comes with no warranty. Use at your own risk
+
+## this script accomplishes two tasks - 
+##  1. cut stimulus from carrier phrase and append silence
+##      then write to .wav file
+##  2. get midpoint of vowel
+## The first part requires the user to highlight the portion of the sound file
+## which contains the stimulus
+## The second part requires the user to highlight only the vowel portion 
+## The script loops over a directory containing .wav files, opens each one
+## displays it in a textgrid, then asks the user to select a portion of the 
+## sound to be cut out, and then to select the vowel, and it marks the midpoint
+## of the vowel. We used this script to edit stimuli for a perceptual experiment
+## 
+
+######################################################################
+endeditor
+clearinfo
+
+# here we determine what files to use and where to store them. If you are 
+# working by yourself, you can comment the part about names out, and uncomment 
+# indir and outdir
+# nextFileNum allows you to start where you left off
+form nextfile
+  comment What is your name? 
+  choice name 1
+    button rob
+    button dan
+    button ryan
+    button kristin
+  positive nextFileNum 1
+endform
+
+#word indir /Users/robfelty/diss/stimuli/mono/
+#word outdir /Users/robfelty/diss/stimuli/edited/word/
+
+basedir$="C:\Documents and Settings\labuser\Desktop\stimuli05"
+
+edited$= "edited"
+indir$ = "'basedir$'\'name$'\original\"
+echo fnum'tab$'fname'tab$'cutstart'tab$'cutend'tab$'rating'tab$'comment'tab$'vowelstart'tab$'vowelend'tab$'midpoint
+fileappend "'basedir$'\'name$'\stimuli.txt" fnum'tab$'fname'tab$'cutstart'tab$'cutend'tab$'rating'tab$'comment'tab$'vowelstart'tab$'vowelend'tab$'midpoint'newline$'
+outdir$ = "'basedir$'\'name$'\'edited$'\"
+#indir$ = "/Users/robfelty/RobsDocs/diss/stimuli/mono/"
+#outdir$ = "/Users/robfelty/RobsDocs/diss/stimuli/edited/word/"
+
+Create Strings as file list... list 'indir$'*
+numFiles = Get number of strings
+
+for i from nextFileNum to numFiles
+
+  #get name of selected sound
+  select Strings list
+  currentFile$ = Get string... 'i'
+  Read from file... 'indir$''currentFile$'
+
+  word$ = selected$ ("Sound")
+
+
+  Create Sound... silence 0 0.1 44100 0
+
+  select Sound 'word$'
+  Edit
+  pause select word
+  editor Sound 'word$'
+    #get start and end point of selection
+    begin = Get start of selection
+    end = Get end of selection
+    Move begin of selection to nearest zero crossing
+    Move end of selection to nearest zero crossing
+    Extract selection
+  endeditor
+  select Sound 'word$'
+  Remove
+  select Sound silence
+  Copy... silence2
+  select Sound silence
+  plus Sound untitled
+  plus Sound silence2
+  Concatenate
+
+  Rename... 'word$'
+  Scale peak... 0.99
+
+  Write to WAV file... 'outdir$''word$'.wav
+  select Sound untitled
+  plus Sound silence
+  plus Sound silence2
+  Remove
+  select Sound 'word$'
+
+
+  Play
+  To TextGrid... "rating notes" rating notes
+  plus Sound 'word$'
+  Edit
+  pause write rating and notes, then select vowel
+  editor TextGrid 'word$'
+    vowelbegin = Get start of selection
+    vowelend = Get end of selection
+    midpoint = vowelbegin + ((vowelend-vowelbegin)/2)
+  endeditor
+
+
+
+  select TextGrid 'word$'
+
+  rating = Get label of point... 1 1
+  notes$ = Get label of point... 2 1
+
+  plus Sound 'word$'
+  Remove
+  #print to info window
+  print 'i''tab$''word$''tab$''begin:4''tab$''end:4''tab$''rating''tab$''notes$'
+  fileappend "'basedir$'\'name$'\stimuli.txt" 'i''tab$''word$''tab$''begin:4''tab$''end:4''tab$''rating''tab$''notes$''tab$'  
+  print 'vowelbegin:4''tab$''vowelend:4''tab$''midpoint:4''newline$'
+  fileappend "'basedir$'\'name$'\stimuli.txt" 'vowelbegin:4''tab$''vowelend:4''tab$''midpoint:4''newline$'
+pause next stimulus?
+endfor
+pause all done with this dir

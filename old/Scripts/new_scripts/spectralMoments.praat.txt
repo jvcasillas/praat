@@ -1,0 +1,76 @@
+######################################################################
+#### Robert Felty <robfelty - indiana.edu>
+#### 2008
+#### This script comes with no warranty. Use at your own risk
+
+## Measure spectral moments
+## 
+## This script loops over a directory, opening each .wav file one at a time,
+## and creates a sound object, then opens it. At this
+## point, the user can select a portion (a vowel or a consonant)
+## to be measured. The script then creates a spectral slice with the specified
+## window width centered at the midpoint of the selected region.
+## Then the script measures the first 4 spectral moments of the spectral slice.
+## A pause dialog box is opened (it may be hidden behind the
+## textgrid window). Clicking on continue will write the measurements to the
+## specified file. The current sound object and the spectrum object will be
+## deleted, and the next file will be opened.
+
+######################################################################
+endeditor
+clearinfo
+
+# nextFileNum allows you to start where you left off
+nextFileNum=136
+
+basedir$="/home/robfelty/Desktop/DansCVCs/"
+# for Windows
+# basedir$="C:\home\robfelty\Desktop\DansCVCs\"
+
+
+edited$= "edited"
+indir$ = "'basedir$'H_norm/"
+outfile$ = "rob.txt"
+echo fnum'tab$'fname'tab$'selectionStart'tab$'selectionEnd'tab$'center'tab$'stdev'tab$'skewness'tab$'kurtosis'newline$'
+fileappend "'basedir$''outfile$'" fnum'tab$'fname'tab$'selectionStart'tab$'selectionEnd'tab$'center'tab$'stdev'tab$'skewness'tab$'kurtosis'newline$'
+
+Create Strings as file list... list 'indir$'*.wav
+Sort
+numFiles = Get number of strings
+for i from nextFileNum to numFiles
+
+  #get name of selected sound
+  select Strings list
+  currentFile$ = Get string... 'i'
+  Read from file... 'indir$''currentFile$'
+
+  word$ = selected$ ("Sound")
+
+
+  #To TextGrid... "boundaries" boundaries
+  #plus Sound 'word$'
+  Edit
+  pause select portion to be measured
+  windowSize=0.025
+  editor Sound 'word$'
+    selectionbegin = Get start of selection
+    selectionend = Get end of selection
+    midpoint = selectionbegin + ((selectionend-selectionbegin)/2)
+    centerStart = midpoint-windowSize/2
+    centerEnd = midpoint+windowSize/2
+    Select... centerStart centerEnd
+    View spectral slice
+  endeditor
+  
+  gravity=Get centre of gravity... 2.0
+  stdev=Get standard deviation... 2.0
+  skewness=Get skewness... 2.0
+  kurtosis=Get kurtosis... 2.0
+  
+  plus Sound 'word$'
+  Remove
+  #print to info window
+  print 'i''tab$''word$''tab$''centerStart:4''tab$''centerEnd:4''tab$''gravity:4''tab$''stdev:4''tab$''skewness:4''tab$''kurtosis:4''newline$'
+  fileappend "'basedir$''outfile$'" 'i''tab$''word$''tab$''centerStart:4''tab$''centerEnd:4''tab$''gravity:4''tab$''stdev:4''tab$''skewness:4''tab$''kurtosis:4''newline$'
+endfor
+pause all done with this dir

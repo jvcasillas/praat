@@ -1,0 +1,15 @@
+SYNTHESIS SETTINGS 
+
+ Steps: 11 
+ Prediction_order: 11 
+ Analysis_window: 0.0128 
+ Time_step: 0.01 
+ Initial_frame_offset: 5 
+ Final_frame_offset 5 
+ Method: Dynamic 
+ Start_vowel: i 
+ Word_a: ship 
+ Word_b: sheep 
+ Environment: sh 
+ Offset: 0 
+ Directory /Users/BMXican47/desktop

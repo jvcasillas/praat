@@ -1,0 +1,27 @@
+form Enter information
+	comment Folders where files are kept:
+	sentence dirFiles /Users/simonet/Desktop/WorkshopArizona/Scripting/SOUNDS
+endform
+
+Create Strings as file list... soundFiles 'dirFiles$'/*.wav
+select Strings soundFiles
+
+numberOfFiles = Get number of strings
+
+for each to numberOfFiles
+	select Strings soundFiles
+	soundName$ = Get string... each
+	name$ = soundName$ - ".wav"
+	Read from file... 'dirFiles$'/'soundName$'
+	select Sound 'name$'
+	To TextGrid... "1 2" 2
+	select Sound 'name$'
+	plus TextGrid 'name$'
+	Edit
+	pause Continue?
+	select TextGrid 'name$'
+	Write to binary file... 'dirFiles$'/'name$'.TextGrid
+	select all
+	minus Strings soundFiles
+	Remove
+endfor
