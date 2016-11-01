@@ -1,10 +1,12 @@
 ---
 title       : 'Praat'
-author      : 'Joseph V. Casillas'
+author      : 'Joseph V. Casillas, PhD'
 hitheme     : solarized_light
 mode        : selfcontained
 github      : {user: jvcasill, repo: praat, branch: gh-pages}
 ---
+
+This is a collection of tutorials and scripts for working in Praat. 
 
 ## Slides
 
