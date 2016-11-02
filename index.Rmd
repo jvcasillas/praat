@@ -6,6 +6,8 @@ mode        : selfcontained
 github      : {user: jvcasill, repo: praat, branch: gh-pages}
 ---
 
+## Overview
+
 This is a collection of tutorials and scripts for working in Praat. 
 
 ## Slides
@@ -22,6 +24,11 @@ writeLines(links[1:keep])
 
 </br> 
 
+## Scripts
+
+- coming soon
+
+</br>
 
 ## Misc
 
