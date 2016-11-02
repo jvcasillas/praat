@@ -26,34 +26,125 @@ url         : {lib: "../../libraries", assets: "../../libraries/assets"}
 
 <p></p>
 
-- Praat is a free program used in linguistics for
-  - speech analysis
-  - speech synthesis
-  - speech manipulation
+- Praat is a free, cross-platform program used in linguistics for
+  - speech analysis, synthesis, and manipulation
   - labeling and segmentation
   - listening experiments
   - statistics
+- Download [here](http://www.praat.org)
 
 ---
 
 ## Overview
 
 <div style="float:right">
+  <img width='100' src="../../libraries/assets/img/fill.png">
   <img src="../../libraries/assets/img/pensar2.jpg">
 </div>
 
 ### In this tutorial you will learn about:
 
-- Voice Onset Time
+- Voice Onset Time (VOT)
+
+</br>
+
+### You will learn how to:
+
+- Measure VOT in word initial stops
+- Create graphics with waveforms/spectrograms and time segmentations
+
+--- .segue bg:grey
+
+# Voice onset time
 
 ---
 
-## Sound files
+## Voice onset time
 
-<audio controls>
-  <source src="../../libraries/assets/wavs/paper.ogg" type="audio/ogg">
-  <source src="../../libraries/assets/wavs/paper.wav" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+- Define
+
+---
+
+## Types of VOT
+
+- lead (negative) VOT
+- short-lag (positive) VOT
+- long-lag (positive) VOT
+
+---
+
+##
+
+images of VOT
+
+---
+
+## English VOT
+
+- short-lag 
+- long-lag
+
+---
+
+## Spanish VOT
+
+- lead VOT
+- short-lag VOT
+
+---
+
+image of spanish english distributions
+
+--- .segue bg:grey
+
+# Measuring VOT
+
+---
+
+## Measuring VOT
+
+- Remember definition of VOT
+- Time interval between stop release and onset of voicing
+
+---
+
+## Practice
+
+### English
+
+- Create recordings of the words 'bin' and 'pin' in English
+- Examine the waveforms and spectrograms
+- Measure their VOT
+
+### Spanish
+
+- Download the following files
+	- [bata](http://www.jvcasillas.com/praat/libraries/assets/wavs/bata.wav) 
+	<img width='20' src="../../libraries/assets/img/fill.png">
+	<audio controls>
+      <source src="../../libraries/assets/wavs/bata.ogg" type="audio/ogg">
+      <source src="../../libraries/assets/wavs/bata.wav" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+	- [pata](http://www.jvcasillas.com/praat/libraries/assets/wavs/pata.wav) 
+	<img width='20' src="../../libraries/assets/img/fill.png">
+	<audio controls>
+	  <source src="../../libraries/assets/wavs/pata.ogg" type="audio/ogg">
+	  <source src="../../libraries/assets/wavs/pata.wav" type="audio/mpeg">
+	Your browser does not support the audio element.
+	</audio>
+- Import them into Praat
+- Examine the waveforms and spectrograms
+- Measure their VOT
+
+
+
+
+
+---
+
+## Images
+
+
 
 ---
