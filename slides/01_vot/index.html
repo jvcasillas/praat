@@ -142,8 +142,16 @@
     <h2>Voice onset time</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li>Define</li>
+    <div style="float:right">
+  <img width='100' src="../../libraries/assets/img/fill.png">
+  <img src="../../libraries/assets/img/confundido.png">
+</div>
+
+<ul>
+<li>Measurement (in ms) associated with stop consonants</li>
+<li>One of several acoustic correlates of voicing contrasts (i.e. &#39;bin&#39; vs. &#39;pin&#39;)</li>
+<li>Result of coordination of gestures</li>
+<li><BLUE>Time interval (in ms) between the release of the stop burst and the onset of voicing</BLUE></li>
 </ul>
 
   </article>
@@ -159,10 +167,25 @@
     <h2>Types of VOT</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li>lead (negative) VOT</li>
-<li>short-lag (positive) VOT</li>
-<li>long-lag (positive) VOT</li>
+    <div style="float:right">
+  <img width='60' src="../../libraries/assets/img/fill.png">
+  <img width='400' src="./assets/img/vot_oscillograms.png">
+</div>
+
+<h3>Three phonetic realizations of voicing</h3>
+
+<ul>
+<li><strong>Lead</strong> (negative) VOT: voicing begins before release of stop (approx. -60ms)</li>
+<li><strong>Short-lag</strong> (positive) VOT: short time interval after release of stop before onset of voicing (0ms to 30ms)</li>
+<li><strong>Long-lag</strong> (positive) VOT: longer time interval after release of stop before onset of voicing (approx. 60ms) </li>
+</ul>
+
+<h3>Cross-linguistic differences</h3>
+
+<ul>
+<li>What constitutes a phonologically voiced or voiceless stop is language-specific</li>
+<li>Average VOT values vary depending on language, speaker, phonetic context, etc.</li>
+<li>That said, they typically fall in a variety-specific range</li>
 </ul>
 
   </article>
@@ -175,9 +198,9 @@
 
 <slide class="" id="slide-6" style="background:;">
   <article data-timings="">
-    <p>##</p>
-
-<p>images of VOT</p>
+    <div align="center">
+  <img width='700' src="./assets/img/vot_oscillograms.png">
+</div>
 
   </article>
   <!-- Presenter Notes -->
@@ -189,12 +212,29 @@
 
 <slide class="" id="slide-7" style="background:;">
   <hgroup>
-    <h2>English VOT</h2>
+    <h2>Cross-linguistic differences</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li>short-lag </li>
-<li>long-lag</li>
+    <h3>English VOT</h3>
+
+<ul>
+<li>English has a two-way voicing contrast 
+
+<ul>
+<li>Phonologically voiced stops realized with <strong>short-lag</strong> VOT</li>
+<li>Phonologically voiceless stops realized with <BLUE>long-lag</BLUE> VOT</li>
+</ul></li>
+</ul>
+
+<h3>Spanish VOT</h3>
+
+<ul>
+<li>Spanish has a two-way voicing contrast
+
+<ul>
+<li>Phonologically voiced stops realized with <strong>lead</strong> VOT</li>
+<li>Phonologically voiceless stop realized with <BLUE>short-lag</BLUE> VOT</li>
+</ul></li>
 </ul>
 
   </article>
@@ -207,13 +247,14 @@
 
 <slide class="" id="slide-8" style="background:;">
   <hgroup>
-    <h2>Spanish VOT</h2>
+    <h2>Spanish vs. English</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li>lead VOT</li>
-<li>short-lag VOT</li>
-</ul>
+    <p></br></p>
+
+<div align="center">
+  <img width='100%' src="./assets/img/sp_en_stops.png">
+</div>
 
   </article>
   <!-- Presenter Notes -->
@@ -223,19 +264,7 @@
   </div>
 </slide>
 
-<slide class="" id="slide-9" style="background:;">
-  <article data-timings="">
-    <p>image of spanish english distributions</p>
-
-  </article>
-  <!-- Presenter Notes -->
-  <div class='edit-button button-group'>
-    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/01/index.Rmd" class="button icon edit">Edit</a>
-    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
-  </div>
-</slide>
-
-<slide class="segue" id="slide-10" style="background:grey;">
+<slide class="segue" id="slide-9" style="background:grey;">
   <hgroup>
     <h1>Measuring VOT</h1>
   </hgroup>
@@ -249,14 +278,45 @@
   </div>
 </slide>
 
-<slide class="" id="slide-11" style="background:;">
+<slide class="" id="slide-10" style="background:;">
   <hgroup>
     <h2>Measuring VOT</h2>
   </hgroup>
   <article data-timings="">
     <ul>
-<li>Remember definition of VOT</li>
-<li>Time interval between stop release and onset of voicing</li>
+<li>VOT: <BLUE>Time interval (in ms) between the release of the stop burst and the onset of voicing</BLUE></li>
+<li>In the spectrogram/waveform we need to locate 2 landmarks:
+
+<ul>
+<li>(1) stop release </li>
+<li>(2) voicing onset </li>
+</ul></li>
+<li><code>Time in ms between (1) and (2) = VOT</code></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/01/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Measuring VOT</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>English voiced stop (/d/ &#39;damper&#39;)</h3>
+
+<div align="center">
+  <img width='700' src="./assets/img/damper.png">
+</div>
+
+<ul>
+<li>(1) stop release </li>
+<li>(2) voicing onset </li>
+<li><code>Time in ms between (1) and (2) = VOT</code></li>
 </ul>
 
   </article>
@@ -268,6 +328,103 @@
 </slide>
 
 <slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Measuring VOT</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>English voiceless stop (/t/ &#39;taboo&#39;)</h3>
+
+<div align="center">
+  <img width='700' src="./assets/img/taboo.png">
+</div>
+
+<ul>
+<li>(1) stop release </li>
+<li>(2) voicing onset </li>
+<li><code>Time in ms between (1) and (2) = VOT</code></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/01/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Measuring VOT</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Spanish voiced stop (/b/ &#39;bala&#39;)</h3>
+
+<div align="center">
+  <img width='700' src="./assets/img/bala.png">
+</div>
+
+<ul>
+<li>(1) stop release </li>
+<li>(2) voicing onset </li>
+<li><code>Time in ms between (1) and (2) = VOT</code></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/01/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Measuring VOT</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Spanish voiceless stop (/p/ &#39;pala&#39;)</h3>
+
+<div align="center">
+  <img width='700' src="./assets/img/pala.png">
+</div>
+
+<ul>
+<li>(1) stop release </li>
+<li>(2) voicing onset </li>
+<li><code>Time in ms between (1) and (2) = VOT</code></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/01/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <article data-timings="">
+    <div align="center">
+  <img width='700' src="./assets/img/ex_aspiration.png">
+</div>
+
+<p></p>
+
+<ul>
+<li>When you select the voicing onset and the stop release, Praat will automatically give you the 
+time interval</li>
+<li>The VOT is 64ms for this particular English /p/ (long-lag VOT)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/01/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
   <hgroup>
     <h2>Practice</h2>
   </hgroup>
@@ -314,9 +471,9 @@ Your browser does not support the audio element.
   </div>
 </slide>
 
-<slide class="" id="slide-13" style="background:;">
+<slide class="segue" id="slide-17" style="background:grey;">
   <hgroup>
-    <h2>Images</h2>
+    <h1>Creating graphics</h1>
   </hgroup>
   <article data-timings="">
     
@@ -328,9 +485,255 @@ Your browser does not support the audio element.
   </div>
 </slide>
 
-<slide class="" id="slide-14" style="background:;">
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Creating graphics</h2>
+  </hgroup>
   <article data-timings="">
-    
+    <div style="float:right">
+  <img width='70' src="../../libraries/assets/img/fill.png">
+  <img width='400' src="../../libraries/assets/img/no.gif">
+</div>
+
+<ul>
+<li><strong>No screenshots</strong></li>
+<li>Praat has exceptional graphing capabilities</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/01/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>Step by step approach to plotting VOT in Praat</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><BLUE>1</BLUE>. Select sound object you want to graph<br>
+<BLUE>2</BLUE>. Click <code>View and Edit</code></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/01/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>Step by step approach to plotting VOT in Praat</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><BLUE>3</BLUE>. Select desired region of recording &gt; zoom in (<code>sel</code>)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/01/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Step by step approach to plotting VOT in Praat</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><BLUE>4</BLUE>. Select VOT range (stop release to onset of voicing)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/01/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>Step by step approach to plotting VOT in Praat</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><BLUE>5</BLUE>. Draw waveform  </p>
+
+<ul>
+<li><code>File</code> &gt; <code>Draw visible sound...</code></li>
+<li>Unselect <code>Draw selection times</code> and <code>Garnish</code></li>
+<li>Click Ok</li>
+</ul>
+
+<p><strong>Note</strong>: You may have to erase (Edit &gt; Erase all) and reselect the viewport. 
+Try to get yours to look like this and redo step 5 as necessary</p>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/01/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>Step by step approach to plotting VOT in Praat</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><BLUE>6</BLUE>. Once you have a satisfactory waveform, without changing the viewport, select 
+the tab <code>Margins</code> &gt; <code>Draw inner box</code></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/01/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-24" style="background:;">
+  <hgroup>
+    <h2>Step by step approach to plotting VOT in Praat</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><BLUE>7</BLUE>. Next select a new rectangle in the viewport, just below the waveform</p>
+
+<ul>
+<li>Try to match yours to the rectangle in the image (use the rulers)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/01/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>Step by step approach to plotting VOT in Praat</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><BLUE>8<BLUE>. Draw the spectrogram</p>
+
+<ul>
+<li>Go back to the spectrogram window</li>
+<li>Select the tab <code>Spectrum</code> &gt; <code>Paint visible spectrogram...</code></li>
+<li>Unselect <code>Erase first</code> and <code>Draw selection times</code></li>
+<li>Select <code>Garnish</code></li>
+<li>Click Ok</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/01/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-26" style="background:;">
+  <hgroup>
+    <h2>Step by step approach to plotting VOT in Praat</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><BLUE>9</BLUE>. Select the waveform and the spectrogram in the viewport<br>
+<BLUE>10</BLUE>. Save as .pdf/.png</p>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/01/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-27" style="background:;">
+  <hgroup>
+    <h2>Step by step approach to plotting VOT in Praat</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Select sound object you want to graph<br></li>
+<li>Click <code>View and Edit</code></li>
+<li>Select desired region of recording &gt; zoom in (<code>sel</code>)</li>
+<li>Select VOT range (stop release to onset of voicing)</li>
+<li>Draw waveform<br>
+
+<ul>
+<li><code>File</code> &gt; <code>Draw visible sound...</code></li>
+</ul></li>
+<li>Once you have a satisfactory waveform, without changing the viewport, select 
+the tab <code>Margins</code> &gt; <code>Draw inner box</code></li>
+<li>Next select a new rectangle in the viewport, just below the waveform</li>
+<li>Draw the spectrogram
+
+<ul>
+<li>Select the tab <code>Spectrum</code> &gt; <code>Paint visible spectrogram...</code></li>
+</ul></li>
+<li>Select the waveform and the spectrogram in the viewport<br></li>
+<li>Save as .pdf/.png</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/01/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-28" style="background:;">
+  <hgroup>
+    <h2>Conclusion</h2>
+  </hgroup>
+  <article data-timings="">
+    <div style="float:right">
+  <img width='70' src="../../libraries/assets/img/fill.png">
+  <img width='400' src="../../libraries/assets/img/ba.gif">
+</div>
+
+<h3>In this short tutorial you learned about:</h3>
+
+<ul>
+<li>Voice Onset Time (VOT)</li>
+</ul>
+
+<h3>and now you are able to:</h3>
+
+<ul>
+<li>Measure VOT in word initial stops</li>
+<li>Create graphics with waveforms/spectrograms and time segmentations</li>
+</ul>
+
+<h3>Additional help</h3>
+
+<ul>
+<li>Try another <a href="http://www.jvcasillas.com/praat/">praat tutorial</a></li>
+<li>Email me (<a href="mailto:joseph.casillas@rutgers.edu">joseph.casillas@rutgers.edu</a>)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/01/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-29" style="background:;">
+  <hgroup>
+    <h2>References</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>ref</li>
+</ul>
+
   </article>
   <!-- Presenter Notes -->
   <div class='edit-button button-group'>
@@ -381,19 +784,19 @@ Your browser does not support the audio element.
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='English VOT'>
+        data-slide=7 title='Cross-linguistic differences'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Spanish VOT'>
+        data-slide=8 title='Spanish vs. English'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='NA'>
+        data-slide=9 title='Measuring VOT'>
          9
       </a>
     </li>
@@ -411,20 +814,110 @@ Your browser does not support the audio element.
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='Practice'>
+        data-slide=12 title='Measuring VOT'>
          12
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='Images'>
+        data-slide=13 title='Measuring VOT'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='NA'>
+        data-slide=14 title='Measuring VOT'>
          14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='NA'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Practice'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Creating graphics'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Creating graphics'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='Step by step approach to plotting VOT in Praat'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='Step by step approach to plotting VOT in Praat'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='Step by step approach to plotting VOT in Praat'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='Step by step approach to plotting VOT in Praat'>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='Step by step approach to plotting VOT in Praat'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Step by step approach to plotting VOT in Praat'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='Step by step approach to plotting VOT in Praat'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='Step by step approach to plotting VOT in Praat'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='Step by step approach to plotting VOT in Praat'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='Conclusion'>
+         28
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title='References'>
+         29
       </a>
     </li>
   </ul>

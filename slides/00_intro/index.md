@@ -4,7 +4,7 @@ subtitle    : "Recording, opening and saving sound files"
 lecnum      : "00"
 author      : "Joseph V. Casillas, PhD"
 affiliation : "Rutgers University"
-date        : "2016-11-02 12:00:41"
+date        : "2016-11-02 14:42:20"
 github      : {user: jvcasill, repo: praat}
 framework   : io2012
 highlighter : highlight.js  
