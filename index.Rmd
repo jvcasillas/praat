@@ -27,19 +27,14 @@ writeLines(links[1:keep])
 
 ### Links
 
-- [Phonetics flash cards](https://quizlet.com/93374714/fonetica-flash-cards/)
+- [Praat official website](http://www.fon.hum.uva.nl/praat/)
 - Los sonidos del habla - Universidad de Iowa ([inglés](http://soundsofspeech.uiowa.edu/english/english.html), [español](http://soundsofspeech.uiowa.edu/spanish/spanish.html))
-- [Mi página web personal](http://www.jvcasillas.com)
-- [A course in phonetics](http://linguistics.berkeley.edu/acip/)
-- [What should we call linguistics](http://whatshouldwecalllinguistics.tumblr.com)
-- [All things linguistic](http://allthingslinguistic.com)
 
 </br> 
 
 ### Articles
 
-- [So you know a linguist](http://www.slideshare.net/Jayelem/so-you-know-a-linguist)
-- El español de EE.UU.
+- Coming soon
 
 
 </br> 

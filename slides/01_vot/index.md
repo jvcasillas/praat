@@ -4,7 +4,7 @@ subtitle    : "Measuring VOT"
 lecnum      : "01"
 author      : "Joseph V. Casillas, PhD"
 affiliation : "Rutgers University"
-date        : "2016-11-01 13:22:51"
+date        : "2016-11-02 11:06:09"
 github      : {user: jvcasill, repo: praat}
 framework   : io2012
 highlighter : highlight.js  
@@ -17,9 +17,43 @@ biglogo     : ru.png
 url         : {lib: "../../libraries", assets: "../../libraries/assets"}
 ---
 
-## Información básica
 
-- This is the 
-- First slide
+## About Praat
+
+<div align="center">
+  <img width='50%' src="../../libraries/assets/img/praat.png">
+</div>
+
+<p></p>
+
+- Praat is a free program used in linguistics for
+  - speech analysis
+  - speech synthesis
+  - speech manipulation
+  - labeling and segmentation
+  - listening experiments
+  - statistics
+
+---
+
+## Overview
+
+<div style="float:right">
+  <img src="../../libraries/assets/img/pensar2.jpg">
+</div>
+
+### In this tutorial you will learn about:
+
+- Voice Onset Time
+
+---
+
+## Sound files
+
+<audio controls>
+  <source src="../../libraries/assets/wavs/paper.ogg" type="audio/ogg">
+  <source src="../../libraries/assets/wavs/paper.wav" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
 
 ---

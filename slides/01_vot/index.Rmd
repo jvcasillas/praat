@@ -17,9 +17,43 @@ biglogo     : ru.png
 url         : {lib: "../../libraries", assets: "../../libraries/assets"}
 ---
 
-## Información básica
 
-- This is the 
-- First slide
+## About Praat
+
+<div align="center">
+  <img width='50%' src="../../libraries/assets/img/praat.png">
+</div>
+
+<p></p>
+
+- Praat is a free program used in linguistics for
+  - speech analysis
+  - speech synthesis
+  - speech manipulation
+  - labeling and segmentation
+  - listening experiments
+  - statistics
+
+---
+
+## Overview
+
+<div style="float:right">
+  <img src="../../libraries/assets/img/pensar2.jpg">
+</div>
+
+### In this tutorial you will learn about:
+
+- Voice Onset Time
+
+---
+
+## Sound files
+
+<audio controls>
+  <source src="../../libraries/assets/wavs/paper.ogg" type="audio/ogg">
+  <source src="../../libraries/assets/wavs/paper.wav" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
 
 ---

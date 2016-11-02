@@ -49,7 +49,7 @@
     <h1>Working in Praat</h1>
     <h2>Recording, opening and saving sound files</h2>
     <p>Joseph V. Casillas, PhD </br> 
-       Rutgers University | Last updated: <pSpecial>2016-11-01</pSpecial></p>
+       Rutgers University | Last updated: <pSpecial>2016-11-02</pSpecial></p>
   </hgroup>
     <a href="https://github.com/jvcasill/praat/" class="example">
      See code
@@ -61,16 +61,25 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Información básica</h2>
+    <h2>About Praat</h2>
   </hgroup>
   <article data-timings="">
     <div align="center">
-  <img src="./assets/img/praat.png">
+  <img width='50%' src="../../libraries/assets/img/praat.png">
 </div>
 
+<p></p>
+
 <ul>
-<li>This is the </li>
-<li>First slide</li>
+<li>Praat is a free, cross-platform program used in linguistics for
+
+<ul>
+<li>speech analysis, synthesis, and manipulation</li>
+<li>labeling and segmentation</li>
+<li>listening experiments</li>
+<li>statistics</li>
+</ul></li>
+<li>Download <a href="http://www.praat.org">here</a></li>
 </ul>
 
   </article>
@@ -83,12 +92,31 @@
 
 <slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Open Praat</h2>
+    <h2>Overview</h2>
   </hgroup>
   <article data-timings="">
-    <div align="center">
-  <img src="./assets/img/praatWindows.png">
+    <div style="float:right">
+  <img src="../../libraries/assets/img/pensar2.jpg">
 </div>
+
+<h3>In this tutorial you will learn about:</h3>
+
+<ul>
+<li>the Praat interface</li>
+<li>objects</li>
+<li>spectrograms/waveforms</li>
+</ul>
+
+<p></br></p>
+
+<h3>You will also learn how to:</h3>
+
+<ul>
+<li>record sound objects</li>
+<li>view and reproduce sound objects</li>
+<li>import sound files</li>
+<li>save sound files</li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -98,15 +126,12 @@
   </div>
 </slide>
 
-<slide class="" id="slide-3" style="background:;">
+<slide class="segue" id="slide-3" style="background:grey;">
   <hgroup>
-    <h2>Record a sound object</h2>
+    <h1>The Praat interface</h1>
   </hgroup>
   <article data-timings="">
-    <div align="center">
-  <img src="./assets/img/praatNewsound1.png">
-</div>
-
+    
   </article>
   <!-- Presenter Notes -->
   <div class='edit-button button-group'>
@@ -117,12 +142,28 @@
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Record a sound object</h2>
+    <h2>The Praat interface</h2>
   </hgroup>
   <article data-timings="">
-    <div align="center">
-  <img src="./assets/img/praatNewsound2.png">
+    <h3>Upon opening Praat, you should see two windows:</h3>
+
+<div align="center">
+  <img width='80%' src="./assets/img/praatWindows.png">
 </div>
+
+<p></p>
+
+<ol>
+<li><strong>Praat Objects</strong>: (left) the window where objects are stored, accessed, and manipulated</li>
+<li><strong>Praat Picture</strong>: (right) the window where graphing outputs are displayed</li>
+</ol>
+
+<p></p>
+
+<ul class = "build incremental">
+<li>We will mainly work in <strong>Praat Objects</strong> (you can close <strong>Praat Picture</strong> if you want)</li>
+<li>Notice there is not a lot going on without any objects</li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -137,9 +178,24 @@
     <h2>Record a sound object</h2>
   </hgroup>
   <article data-timings="">
-    <div align="center">
-  <img src="./assets/img/praatNewsound3.png">
+    <div style="float:right">
+  <img width='100' src="../../libraries/assets/img/fill.png">
+  <img width='400' src="./assets/img/praatNewsound1.png">
 </div>
+
+<h3>In order to record a sound object you must have an internal microphone or</h3>
+
+<p>you must connect a microphone to your computer</p>
+
+<ul>
+<li>To record a sound object:
+
+<ul>
+<li>Go to the Praat Object window</li>
+<li>Click <code>New</code> &gt; <code>Record mono Sound</code></li>
+</ul></li>
+<li>A <strong>SoundRecorder</strong> window will appear</li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -151,11 +207,11 @@
 
 <slide class="" id="slide-6" style="background:;">
   <hgroup>
-    <h2>Record a sound object</h2>
+    <h2>SoundRecorder</h2>
   </hgroup>
   <article data-timings="">
     <div align="center">
-  <img src="./assets/img/praatNewsound4.png">
+  <img width='60%' src="./assets/img/praatNewsound2.png">
 </div>
 
   </article>
@@ -168,12 +224,27 @@
 
 <slide class="" id="slide-7" style="background:;">
   <hgroup>
-    <h2>Record a sound object</h2>
+    <h2>SoundRecorder</h2>
   </hgroup>
   <article data-timings="">
-    <div align="center">
-  <img src="./assets/img/praatNewobject1.png">
+    <div style="float:right">
+  <img width='70' src="../../libraries/assets/img/fill.png">
+  <img width='400' src="./assets/img/praatNewsound3.png">
 </div>
+
+<h3>From this window you can:</h3>
+
+<ul>
+<li>Choose...
+
+<ul>
+<li>Channels (<code>mono</code>/stereo)</li>
+<li>Input source (<code>Built-in Microphone</code>)</li>
+<li>Sampling frequency (<code>44100 Hz</code>)</li>
+</ul></li>
+<li>Record, Stop, and Play speech</li>
+<li>Name the object (default is &#39;Untitled&#39;)</li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -185,12 +256,28 @@
 
 <slide class="" id="slide-8" style="background:;">
   <hgroup>
-    <h2>View a sound object</h2>
+    <h2>SoundRecorder</h2>
   </hgroup>
   <article data-timings="">
-    <div align="center">
-  <img src="./assets/img/praatView.png">
+    <div style="float:right">
+  <img width='70' src="../../libraries/assets/img/fill.png">
+  <img width='400' src="./assets/img/praatNewsound4.png">
 </div>
+
+<h3>Record a sound object</h3>
+
+<ol>
+<li>Use <code>Record</code> and <code>Stop</code> to record some speech</li>
+<li>Use <code>Play</code> to listen to your recording</li>
+<li>Repeat until you are satisfied</li>
+<li>Give your recording a name (ex. &#39;test1&#39;) and then choose <code>Save to list &amp; Close</code> </li>
+</ol>
+
+<p></br></p>
+
+<ul>
+<li>The recording will appear in the <strong>Object window</strong></li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -200,26 +287,9 @@
   </div>
 </slide>
 
-<slide class="" id="slide-9" style="background:;">
+<slide class="segue" id="slide-9" style="background:grey;">
   <hgroup>
-    <h2>Save a sound object</h2>
-  </hgroup>
-  <article data-timings="">
-    <div align="center">
-  <img src="./assets/img/praatSave.png">
-</div>
-
-  </article>
-  <!-- Presenter Notes -->
-  <div class='edit-button button-group'>
-    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/00/index.Rmd" class="button icon edit">Edit</a>
-    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
-  </div>
-</slide>
-
-<slide class="segue" id="slide-10" style="background:grey;">
-  <hgroup>
-    <h1>Importing sound files</h1>
+    <h1>Objects</h1>
   </hgroup>
   <article data-timings="">
     
@@ -231,15 +301,47 @@
   </div>
 </slide>
 
-<slide class="" id="slide-11" style="background:;">
+<slide class="" id="slide-10" style="background:;">
   <hgroup>
-    <h2>Importing sound files</h2>
+    <h2>Sound objects</h2>
   </hgroup>
   <article data-timings="">
-    <div align="center">
-  <img src="./assets/img/praatOpen.png">
+    <div style="float:right">
+  <img width='70' src="../../libraries/assets/img/fill.png">
+  <img width='400' src="./assets/img/praatNewobject1.png">
 </div>
 
+<ul>
+<li>You have created a <code>Sound object</code>, which now appears in the <strong>Praat Objects</strong> 
+window, under the heading <code>Objects</code> </li>
+<li>Notice that Praat gives the object a number and tells you what kind of object it is:<br>
+<code>1. Sound test1</code></li>
+<li>Also notice that there is now a long menu of options on the right</li>
+<li>Praat has many types of objects, each of which have different options in their 
+respective menus (these are the options that correspond<br>
+with sound objects)</li>
+</ul>
+
+<p></p>
+
+<ul class = "build incremental">
+<li>Click <code>View &amp; Edit</code> to create a spectrogram of the Sound object</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/00/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="segue" id="slide-11" style="background:grey;">
+  <hgroup>
+    <h1>Spectrograms and waveforms</h1>
+  </hgroup>
+  <article data-timings="">
+    
   </article>
   <!-- Presenter Notes -->
   <div class='edit-button button-group'>
@@ -250,12 +352,31 @@
 
 <slide class="" id="slide-12" style="background:;">
   <hgroup>
-    <h2>Importing sound files</h2>
+    <h2>Spectrograms and waveforms</h2>
   </hgroup>
   <article data-timings="">
-    <div align="center">
-  <img src="./assets/img/praatNewobject2.png">
+    <div style="float:right">
+  <img width='70' src="../../libraries/assets/img/fill.png">
+  <img width='400' src="./assets/img/praatView.png">
 </div>
+
+<ul>
+<li>You should see something similar to the image on the right</li>
+<li>The figure is divided into two parts:
+
+<ol>
+<li><strong>waveform</strong>/<strong>oscillogram</strong> (top):<br>
+two dimension display of sound pressure over time</li>
+<li><strong>spectrogram</strong> (bottom):<br>
+three dimension display of amplitude (vertical axis)
+and frequency (darkness) over time. </li>
+</ol></li>
+<li>You can reproduce the recording by pressing the<br>
+<code>tab</code> key, and stop the recording by pressing <code>tab</code> again.</li>
+<li>You can use either the waveform or the spectrogram<br>
+to select portions of the recording </li>
+<li>Select a portion and listen to it</li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -267,12 +388,24 @@
 
 <slide class="" id="slide-13" style="background:;">
   <hgroup>
-    <h2>View a sound object</h2>
+    <h2>Spectrograms and waveforms</h2>
   </hgroup>
   <article data-timings="">
-    <div align="center">
-  <img src="./assets/img/praatPaper.png">
+    <p></p>
+
+<div align="center">
+  <img width='100%' src="./assets/img/praatViewoptions.png">
 </div>
+
+<h3>View options</h3>
+
+<ul>
+<li><code>in</code>: zoom in</li>
+<li><code>out</code>: zoom out</li>
+<li><code>sel</code>: zoom in on a selected area (must select area first)</li>
+<li><code>bak</code>: return to previous view</li>
+<li><code>all</code>: zoom all the way out (show entire duration of sound object)</li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -282,9 +415,142 @@
   </div>
 </slide>
 
-<slide class="" id="slide-14" style="background:;">
+<slide class="segue" id="slide-14" style="background:grey;">
+  <hgroup>
+    <h1>Saving and importing sound files</h1>
+  </hgroup>
   <article data-timings="">
     
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/00/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Save a sound object</h2>
+  </hgroup>
+  <article data-timings="">
+    <div style="float:right">
+  <img width='70' src="../../libraries/assets/img/fill.png">
+  <img width='400' src="./assets/img/praatSave.png">
+</div>
+
+<ul>
+<li>Saving a sound object to your computer is easy</li>
+<li>In the <strong>Praat Objects</strong> window, highlight the object you would like to save</li>
+<li>Click the <code>Save</code> tab</li>
+<li>Select the format you would like (we will typically use .WAV files)</li>
+<li>Another window will pop-up in which you can name the file, as well as specify 
+the directory to which it will be saved</li>
+</ul>
+
+<p></br></p>
+
+<ul>
+<li>If you already have sound files to work with...</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/00/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Importing sound files</h2>
+  </hgroup>
+  <article data-timings="">
+    <div style="float:right">
+  <img width='70' src="../../libraries/assets/img/fill.png">
+  <img width='400' src="./assets/img/praatOpen.png">
+</div>
+
+<ul>
+<li>Importing a sound file from your computer is equally easy</li>
+<li>In the <strong>Praat Objects</strong> window click the <code>Open</code> tab</li>
+<li>Select <code>Read from file...</code></li>
+<li>Another window will pop-up in which you can find your sound file 
+and select <code>Open</code></li>
+<li>The file will then appear as a sound object in the <code>Objects</code> 
+section of the <strong>Praat Objects</strong> window</li>
+</ul>
+
+<p></p>
+
+<p><BLUE>Practice</BLUE></p>
+
+<ul>
+<li>Download the following sound file to your computer, open it 
+in Praat and create a spectrogram 
+(<a href="http://www.jvcasillas.com/praat/libraries/assets/wavs/paper.wav">paper.wav</a>)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/00/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Conclusion</h2>
+  </hgroup>
+  <article data-timings="">
+    <div style="float:right">
+  <img width='70' src="../../libraries/assets/img/fill.png">
+  <img width='400' src="../../libraries/assets/img/ole.gif">
+</div>
+
+<h3>In this short tutorial you learned about:</h3>
+
+<ul>
+<li>the Praat interface</li>
+<li>objects</li>
+<li>spectrograms/waveforms</li>
+</ul>
+
+<h3>and now you are able to:</h3>
+
+<ul>
+<li>record sound objects</li>
+<li>view and reproduce sound objects</li>
+<li>import sound files</li>
+<li>save sound files</li>
+</ul>
+
+<h3>Additional help</h3>
+
+<ul>
+<li>Try another <a href="http://www.jvcasillas.com/praat/">praat tutorial</a></li>
+<li>Email me (<a href="mailto:joseph.casillas@rutgers.edu">joseph.casillas@rutgers.edu</a>)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  <div class='edit-button button-group'>
+    <a href="http://prose.io/#jvcasill/praat/edit/gh-pages/lectures/00/index.Rmd" class="button icon edit">Edit</a>
+    <a href='http://jvcasill.github.io/praat' class="button icon home" target="_self">Home</a>  
+  </div>
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>References</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>ref</li>
+</ul>
+
   </article>
   <!-- Presenter Notes -->
   <div class='edit-button button-group'>
@@ -299,25 +565,25 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Información básica'>
+        data-slide=1 title='About Praat'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Open Praat'>
+        data-slide=2 title='Overview'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Record a sound object'>
+        data-slide=3 title='The Praat interface'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Record a sound object'>
+        data-slide=4 title='The Praat interface'>
          4
       </a>
     </li>
@@ -329,56 +595,80 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='Record a sound object'>
+        data-slide=6 title='SoundRecorder'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Record a sound object'>
+        data-slide=7 title='SoundRecorder'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='View a sound object'>
+        data-slide=8 title='SoundRecorder'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='Save a sound object'>
+        data-slide=9 title='Objects'>
          9
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='Importing sound files'>
+        data-slide=10 title='Sound objects'>
          10
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='Importing sound files'>
+        data-slide=11 title='Spectrograms and waveforms'>
          11
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='Importing sound files'>
+        data-slide=12 title='Spectrograms and waveforms'>
          12
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='View a sound object'>
+        data-slide=13 title='Spectrograms and waveforms'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='NA'>
+        data-slide=14 title='Saving and importing sound files'>
          14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Save a sound object'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Importing sound files'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Conclusion'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='References'>
+         18
       </a>
     </li>
   </ul>
