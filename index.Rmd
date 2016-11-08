@@ -26,7 +26,12 @@ writeLines(links[1:keep])
 
 ## Scripts
 
-- coming soon
+```{r echo = F, results = 'asis'}
+scripts = dir('./libraries/assets/scripts', full = TRUE)
+links = paste0("- ", "[", basename(strtrim(scripts, nchar(scripts)-6)), "]", 
+			   "(", scripts, ")")
+writeLines(links)
+```
 
 </br>
 

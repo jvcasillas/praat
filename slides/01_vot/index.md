@@ -4,7 +4,7 @@ subtitle    : "Measuring VOT"
 lecnum      : "01"
 author      : "Joseph V. Casillas, PhD"
 affiliation : "Rutgers University"
-date        : "2016-11-02 14:42:20"
+date        : "2016-11-08 14:10:05"
 github      : {user: jvcasill, repo: praat}
 framework   : io2012
 highlighter : highlight.js  
