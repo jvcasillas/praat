@@ -1,9 +1,6 @@
 ---
 title       : 'Praat'
 author      : 'Joseph V. Casillas, PhD'
-hitheme     : solarized_light
-mode        : selfcontained
-github      : {user: jvcasill, repo: praat, branch: gh-pages}
 ---
 
 ## Overview
@@ -26,8 +23,8 @@ writeLines(links[1:keep])
 
 ## Scripts
 
-```{r echo = F, results = 'asis'}
-scripts = dir('./libraries/assets/scripts', full = TRUE)
+```{r echo = F, results = 'asis', cache=FALSE}
+scripts = dir('./site_libs/assets/scripts', full = TRUE)
 links = paste0("- ", "[", basename(strtrim(scripts, nchar(scripts)-6)), "]", 
 			   "(", scripts, ")")
 writeLines(links)
@@ -56,7 +53,7 @@ writeLines(links)
 
 ```{r, eval=TRUE, echo=FALSE, cache=FALSE}
 library(RefManageR)
-bib <- ReadBib("./libraries/assets/refs/phon340bib.bib", check = FALSE)
+bib <- ReadBib("./site_libs/assets/refs/phon340bib.bib", check = FALSE)
 ```
 
 

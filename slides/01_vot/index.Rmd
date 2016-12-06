@@ -14,14 +14,14 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 logo        : ru.png
 biglogo     : ru.png
-url         : {lib: "../../libraries", assets: "../../libraries/assets"}
+url         : {lib: "../../site_libs", assets: "../../site_libs/assets"}
 ---
 
 
 ## About Praat
 
 <div align="center">
-  <img width='50%' src="../../libraries/assets/img/praat.png">
+  <img width='50%' src="../../site_libs/assets/img/praat.png">
 </div>
 
 <p></p>
@@ -38,8 +38,8 @@ url         : {lib: "../../libraries", assets: "../../libraries/assets"}
 ## Overview
 
 <div style="float:right">
-  <img width='100' src="../../libraries/assets/img/fill.png">
-  <img src="../../libraries/assets/img/pensar2.jpg">
+  <img width='100' src="../../site_libs/assets/img/fill.png">
+  <img src="../../site_libs/assets/img/pensar2.jpg">
 </div>
 
 ### In this tutorial you will learn about:
@@ -62,8 +62,8 @@ url         : {lib: "../../libraries", assets: "../../libraries/assets"}
 ## Voice onset time
 
 <div style="float:right">
-  <img width='100' src="../../libraries/assets/img/fill.png">
-  <img src="../../libraries/assets/img/confundido.png">
+  <img width='100' src="../../site_libs/assets/img/fill.png">
+  <img src="../../site_libs/assets/img/confundido.png">
 </div>
 
 - Measurement (in ms) associated with stop consonants
@@ -76,7 +76,7 @@ url         : {lib: "../../libraries", assets: "../../libraries/assets"}
 ## Types of VOT
 
 <div style="float:right">
-  <img width='60' src="../../libraries/assets/img/fill.png">
+  <img width='60' src="../../site_libs/assets/img/fill.png">
   <img width='400' src="./assets/img/vot_oscillograms.png">
 </div>
 
@@ -219,18 +219,18 @@ time interval
 ### Spanish
 
 - Download the following files
-	- [bata](http://www.jvcasillas.com/praat/libraries/assets/wavs/bata.wav) 
-	<img width='20' src="../../libraries/assets/img/fill.png">
+	- [bata](http://www.jvcasillas.com/praat/site_libs/assets/wavs/bata.wav) 
+	<img width='20' src="../../site_libs/assets/img/fill.png">
 	<audio controls>
-      <source src="../../libraries/assets/wavs/bata.ogg" type="audio/ogg">
-      <source src="../../libraries/assets/wavs/bata.wav" type="audio/mpeg">
+      <source src="../../site_libs/assets/wavs/bata.ogg" type="audio/ogg">
+      <source src="../../site_libs/assets/wavs/bata.wav" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-	- [pata](http://www.jvcasillas.com/praat/libraries/assets/wavs/pata.wav) 
-	<img width='20' src="../../libraries/assets/img/fill.png">
+	- [pata](http://www.jvcasillas.com/praat/site_libs/assets/wavs/pata.wav) 
+	<img width='20' src="../../site_libs/assets/img/fill.png">
 	<audio controls>
-	  <source src="../../libraries/assets/wavs/pata.ogg" type="audio/ogg">
-	  <source src="../../libraries/assets/wavs/pata.wav" type="audio/mpeg">
+	  <source src="../../site_libs/assets/wavs/pata.ogg" type="audio/ogg">
+	  <source src="../../site_libs/assets/wavs/pata.wav" type="audio/mpeg">
 	Your browser does not support the audio element.
 	</audio>
 - Import them into Praat
@@ -246,8 +246,8 @@ time interval
 ## Creating graphics
 
 <div style="float:right">
-  <img width='70' src="../../libraries/assets/img/fill.png">
-  <img width='400' src="../../libraries/assets/img/no.gif">
+  <img width='70' src="../../site_libs/assets/img/fill.png">
+  <img width='400' src="../../site_libs/assets/img/no.gif">
 </div>
 
 - **No screenshots**
@@ -342,8 +342,8 @@ the tab ```Margins``` > ```Draw inner box```
 ## Conclusion
 
 <div style="float:right">
-  <img width='70' src="../../libraries/assets/img/fill.png">
-  <img width='400' src="../../libraries/assets/img/ba.gif">
+  <img width='70' src="../../site_libs/assets/img/fill.png">
+  <img width='400' src="../../site_libs/assets/img/ba.gif">
 </div>
 
 ### In this short tutorial you learned about:

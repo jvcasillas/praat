@@ -4,7 +4,7 @@ subtitle    : "Recording, opening and saving sound files"
 lecnum      : "00"
 author      : "Joseph V. Casillas, PhD"
 affiliation : "Rutgers University"
-date        : "2016-11-08 14:10:05"
+date        : "2016-12-06 17:09:20"
 github      : {user: jvcasill, repo: praat}
 framework   : io2012
 highlighter : highlight.js  
@@ -14,13 +14,13 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 logo        : ru.png
 biglogo     : ru.png
-url         : {lib: "../../libraries", assets: "../../libraries/assets"}
+url         : {lib: "../../site_libs", assets: "../../site_libs/assets"}
 ---
 
 ## About Praat
 
 <div align="center">
-  <img width='50%' src="../../libraries/assets/img/praat.png">
+  <img width='50%' src="../../site_libs/assets/img/praat.png">
 </div>
 
 <p></p>
@@ -37,7 +37,7 @@ url         : {lib: "../../libraries", assets: "../../libraries/assets"}
 ## Overview
 
 <div style="float:right">
-  <img src="../../libraries/assets/img/pensar2.jpg">
+  <img src="../../site_libs/assets/img/pensar2.jpg">
 </div>
 
 ### In this tutorial you will learn about:
@@ -84,7 +84,7 @@ url         : {lib: "../../libraries", assets: "../../libraries/assets"}
 ## Record a sound object
 
 <div style="float:right">
-  <img width='100' src="../../libraries/assets/img/fill.png">
+  <img width='100' src="../../site_libs/assets/img/fill.png">
   <img width='400' src="./assets/img/praatNewsound1.png">
 </div>
 
@@ -109,7 +109,7 @@ you must connect a microphone to your computer
 ## SoundRecorder
 
 <div style="float:right">
-  <img width='70' src="../../libraries/assets/img/fill.png">
+  <img width='70' src="../../site_libs/assets/img/fill.png">
   <img width='400' src="./assets/img/praatNewsound3.png">
 </div>
 
@@ -127,7 +127,7 @@ you must connect a microphone to your computer
 ## SoundRecorder
 
 <div style="float:right">
-  <img width='70' src="../../libraries/assets/img/fill.png">
+  <img width='70' src="../../site_libs/assets/img/fill.png">
   <img width='400' src="./assets/img/praatNewsound4.png">
 </div>
 
@@ -151,7 +151,7 @@ you must connect a microphone to your computer
 ## Sound objects
 
 <div style="float:right">
-  <img width='70' src="../../libraries/assets/img/fill.png">
+  <img width='70' src="../../site_libs/assets/img/fill.png">
   <img width='400' src="./assets/img/praatNewobject1.png">
 </div>
 
@@ -177,7 +177,7 @@ with sound objects)
 ## Spectrograms and waveforms
 
 <div style="float:right">
-  <img width='70' src="../../libraries/assets/img/fill.png">
+  <img width='70' src="../../site_libs/assets/img/fill.png">
   <img width='400' src="./assets/img/praatView.png">
 </div>
 
@@ -221,7 +221,7 @@ to select portions of the recording
 ## Save a sound object
 
 <div style="float:right">
-  <img width='70' src="../../libraries/assets/img/fill.png">
+  <img width='70' src="../../site_libs/assets/img/fill.png">
   <img width='400' src="./assets/img/praatSave.png">
 </div>
 
@@ -241,7 +241,7 @@ the directory to which it will be saved
 ## Importing sound files
 
 <div style="float:right">
-  <img width='70' src="../../libraries/assets/img/fill.png">
+  <img width='70' src="../../site_libs/assets/img/fill.png">
   <img width='400' src="./assets/img/praatOpen.png">
 </div>
 
@@ -258,15 +258,15 @@ section of the **Praat Objects** window
 
 - Download the following sound file to your computer, open it 
 in Praat and create a spectrogram 
-([paper.wav](http://www.jvcasillas.com/praat/libraries/assets/wavs/paper.wav))
+([paper.wav](http://www.jvcasillas.com/praat/site_libs/assets/wavs/paper.wav))
 
 --- 
 
 ## Conclusion
 
 <div style="float:right">
-  <img width='70' src="../../libraries/assets/img/fill.png">
-  <img width='400' src="../../libraries/assets/img/ole.gif">
+  <img width='70' src="../../site_libs/assets/img/fill.png">
+  <img width='400' src="../../site_libs/assets/img/ole.gif">
 </div>
 
 ### In this short tutorial you learned about:
