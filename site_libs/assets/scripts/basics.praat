@@ -8,40 +8,9 @@
 # Getting started #
 ###################
 
-# Download file, place on desktop 
-https://dl.dropboxusercontent.com/u/7256527/ex_project.zip
-http://tinyurl.com/gl4ve8p
 
 # Create a new script
 # Praat > New Praat script
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ######################
@@ -61,20 +30,6 @@ Text: 0, "Centre", 0, "Half", "Hello world"
 
 # Praat is a procedural language
 # Each command is executed in the order it is entered
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -109,16 +64,6 @@ Create Sound from formula: "sine", 1, 0, 1, 44100, "1/2 * sin(2*pi*377*x)"
 
 
 
-
-
-
-
-
-
-
-
-
-
 ####################
 # String variables #
 ####################
@@ -148,20 +93,6 @@ appendInfoLine: var2$
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #####################
 # Numeric variables #
 #####################
@@ -184,23 +115,6 @@ writeInfoLine: val
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ###################
 # Numeric queries #
 ###################
@@ -217,27 +131,6 @@ Get value at time: 1, 0.12, "Hertz", "Linear"
 # from the window?". Good question. You can execute any command 
 # manually and then check the actual syntax by using 'paste history' 
 # (Edit > Paste history; or command + H).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -263,26 +156,6 @@ Read from file: "~/folder/file.wav"
 
 # Save the sound object 'mySound' to your desktop and load it using 
 # the complete path.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -332,40 +205,6 @@ Read from file: "./level1/level2/mySound.wav"
 # mySound.wav   myScript.praat
 
 Read from file: "../level2/mySound.wav"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
