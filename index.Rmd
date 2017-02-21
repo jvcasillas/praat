@@ -51,13 +51,15 @@ writeLines(links)
 
 ## References
 
+- Coming soon
+
 ```{r, eval=TRUE, echo=FALSE, cache=FALSE}
 library(RefManageR)
 bib <- ReadBib("./site_libs/assets/refs/phon340bib.bib", check = FALSE)
 ```
 
 
-```{r, results='asis', echo=FALSE, eval=TRUE}
+```{r, results='asis', echo=FALSE, eval=FALSE}
 ui <- "-"
 writeLines(ui); print(bib[key = "Colina"], .opts = list(check.entries = FALSE, 
 					  style = "html", bib.style = "authoryear"))
