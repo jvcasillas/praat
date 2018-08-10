@@ -397,7 +397,7 @@ background-size: contain
 - Hemos visto un ejemplo de cómo se puede usar la tecnología para complementar la enseñanza de la pronunciación
 
 ---
-class: title-slide-section-grey, center
+class: inverse, center
 background-image: url("./assets/img/0_middlebury_seal.png")
 background-size: 47px
 background-position: 50% 90%
@@ -411,13 +411,8 @@ background-position: 50% 90%
 Joseph V. Casillas  
 (joseph.casillas@rutgers.edu)  
 
-### Presentación disponible en [www.jvcasillas.com/praat/slides/praat_for_pronunciation/](www.jvcasillas.com/praat/slides/praat_for_pronunciation/)
-
-|              |                                   |
-| :----------- | :-------------------------------- |
-| <a href="mailto:joseph.casillas@rutgers.edu"><i class="fa fa-paper-plane fa-fw"></i> | joseph.casillas@rutgers.edu |
-| <a href="http://twitter.com/jvcasill"><i class="fa fa-twitter fa-fw"></i> | @jvcasill    |
-| <a href="http://github.com/jvcasillas"><i class="fa fa-github fa-fw"></i> | @jvcasillas  |
+### Presentación disponible en  
+[www.jvcasillas.com/praat/slides/praat_for_pronunciation/](www.jvcasillas.com/praat/slides/praat_for_pronunciation/)
 
 ---
 class: title-slide-section-grey
