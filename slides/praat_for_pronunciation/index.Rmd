@@ -381,28 +381,46 @@ background-size: contain
 
 ---
 
-# Conclusion
+# Conclusión
 
 <div style="float:right">
   <img width='70' src="../../site_libs/assets/img/fill.png">
   <img width='400' src="../../site_libs/assets/img/ba.gif">
 </div>
 
-### In this short tutorial you learned about:
+### ¿Qué hemos hecho?
 
-- Voice Onset Time (VOT)
+- Hemos aprendido un poco sobre las oclusivas
 
-### and now you are able to:
+- Hemos visto lo que es el tiempo de inicio de sonoridad (Voice Onset Time, VOT)
 
-- Measure VOT in word initial stops
-- Create graphics with waveforms/spectrograms and time segmentations
-
-### Additional help
-
-- Try another [praat tutorial](http://www.jvcasillas.com/praat/)
-- Email me (joseph.casillas@rutgers.edu)
+- Hemos visto un ejemplo de cómo se puede usar la tecnología para complementar la enseñanza de la pronunciación
 
 ---
+class: title-slide-section-grey, center
+background-image: url("./assets/img/0_middlebury_seal.png")
+background-size: 47px
+background-position: 50% 90%
+
+</br></br>
+
+# ¡.RUred[Gracias]!  
+
+# 🗣🎤🎧  
+
+Joseph V. Casillas  
+(joseph.casillas@rutgers.edu)  
+
+### Presentación disponible en [www.jvcasillas.com/praat/slides/praat_for_pronunciation/](www.jvcasillas.com/praat/slides/praat_for_pronunciation/)
+
+|              |                                   |
+| :----------- | :-------------------------------- |
+| <a href="mailto:joseph.casillas@rutgers.edu"><i class="fa fa-paper-plane fa-fw"></i> | joseph.casillas@rutgers.edu |
+| <a href="http://twitter.com/jvcasill"><i class="fa fa-twitter fa-fw"></i> | @jvcasill    |
+| <a href="http://github.com/jvcasillas"><i class="fa fa-github fa-fw"></i> | @jvcasillas  |
+
+---
+class: title-slide-section-grey
 
 # Referencias
 
@@ -421,18 +439,6 @@ Acquisition, 26(4), 551–585.
 *Exploring Language Education: Local and Global Perspectives*. 
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
 class: inverse, middle, center
 
 # .RUred[Recursos]
