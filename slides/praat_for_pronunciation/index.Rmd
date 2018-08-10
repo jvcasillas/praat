@@ -1,6 +1,6 @@
 ---
-title   : "La tecnología y la enseñanza de la pronunciación"
-subtitle: "Praat para la pronunciación"
+title   : "La tecnología y la enseñanza"
+subtitle: "El uso de Praat para enseñar la pronunciación"
 author  : "Joseph V. Casillas</br>Rutgers University"
 date    : "2018-07-10 <br>Última actualización: `r Sys.Date()`"
 output:
