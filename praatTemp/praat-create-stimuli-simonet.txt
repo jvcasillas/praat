@@ -1,0 +1,198 @@
+#####################################
+# Synthesize high vowels on an F2 continuum
+# Based on Chladkova, et al. 2012 JASA-EL
+# From Script by Joseph Casillas
+##################################
+
+#############################
+# Choose where to save the stimuli #
+############################
+
+form Save intervals to small WAV sound files
+	comment Give the folder where to save the sound files:
+	sentence Folder /Users/simonet/Desktop/sounds/
+endform
+
+clearinfo
+
+####################
+# create glottal source  #
+###################
+
+pitchTier = Create PitchTier... source 0 0.155
+Add point... 0.0 150
+Add point... 0.150 100
+pulses = To PointProcess
+Remove points between... 0 0.005
+Remove points between... 0.145 0.155
+source = To Sound (phonation)... 22050 0.6 0.05 0.7 0.03 3.0 4.0
+select pitchTier
+plus pulses
+Remove
+select source
+
+#############################
+# Create formant grids of all vowels #
+#############################
+
+#1st column
+Create FormantGrid... 101 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 1000 else self fi
+Formula (frequencies)... if row = 3 then 2500 else self fi
+Formula (frequencies)... if row = 4 then 3500 else self fi
+Formula (frequencies)... if row = 5 then 4500 else self fi
+
+Create FormantGrid... 102 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 1100 else self fi
+Formula (frequencies)... if row = 3 then 2500 else self fi
+Formula (frequencies)... if row = 4 then 3500 else self fi
+Formula (frequencies)... if row = 5 then 4500 else self fi
+
+#2nd column
+Create FormantGrid... 103 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 1200 else self fi
+Formula (frequencies)... if row = 3 then 2500 else self fi
+Formula (frequencies)... if row = 4 then 3500 else self fi
+Formula (frequencies)... if row = 5 then 4500 else self fi
+
+Create FormantGrid... 104 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 1300 else self fi
+Formula (frequencies)... if row = 3 then 2500 else self fi
+Formula (frequencies)... if row = 4 then 3500 else self fi
+Formula (frequencies)... if row = 5 then 4500 else self fi
+
+#3rd column
+Create FormantGrid... 105 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 1400 else self fi
+Formula (frequencies)... if row = 3 then 2500 else self fi
+Formula (frequencies)... if row = 4 then 3500 else self fi
+Formula (frequencies)... if row = 5 then 4500 else self fi
+
+Create FormantGrid... 106 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 1500 else self fi
+Formula (frequencies)... if row = 3 then 2500 else self fi
+Formula (frequencies)... if row = 4 then 3500 else self fi
+Formula (frequencies)... if row = 5 then 4500 else self fi
+
+#4th column
+Create FormantGrid... 107 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 1600 else self fi
+Formula (frequencies)... if row = 3 then 2600 else self fi
+Formula (frequencies)... if row = 4 then 3600 else self fi
+Formula (frequencies)... if row = 5 then 4600 else self fi
+
+Create FormantGrid... 108 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 1700 else self fi
+Formula (frequencies)... if row = 3 then 2700 else self fi
+Formula (frequencies)... if row = 4 then 3700 else self fi
+Formula (frequencies)... if row = 5 then 4700 else self fi
+
+#5th column
+Create FormantGrid... 109 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 1800 else self fi
+Formula (frequencies)... if row = 3 then 2800 else self fi
+Formula (frequencies)... if row = 4 then 3800 else self fi
+Formula (frequencies)... if row = 5 then 4800 else self fi
+
+Create FormantGrid... 110 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 1900 else self fi
+Formula (frequencies)... if row = 3 then 2900 else self fi
+Formula (frequencies)... if row = 4 then 3900 else self fi
+Formula (frequencies)... if row = 5 then 4900 else self fi
+
+#6th column
+Create FormantGrid... 111 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 2000 else self fi
+Formula (frequencies)... if row = 3 then 3000 else self fi
+Formula (frequencies)... if row = 4 then 4000 else self fi
+Formula (frequencies)... if row = 5 then 5000 else self fi
+
+Create FormantGrid... 112 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 2100 else self fi
+Formula (frequencies)... if row = 3 then 3100 else self fi
+Formula (frequencies)... if row = 4 then 4100 else self fi
+Formula (frequencies)... if row = 5 then 5100 else self fi
+
+#7th column
+Create FormantGrid... 113 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 2200 else self fi
+Formula (frequencies)... if row = 3 then 3200 else self fi
+Formula (frequencies)... if row = 4 then 4200 else self fi
+Formula (frequencies)... if row = 5 then 5200 else self fi
+
+Create FormantGrid... 114 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 2300 else self fi
+Formula (frequencies)... if row = 3 then 3300 else self fi
+Formula (frequencies)... if row = 4 then 4300 else self fi
+Formula (frequencies)... if row = 5 then 5300 else self fi
+
+#8th column
+Create FormantGrid... 115 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 2400 else self fi
+Formula (frequencies)... if row = 3 then 3400 else self fi
+Formula (frequencies)... if row = 4 then 4400 else self fi
+Formula (frequencies)... if row = 5 then 5400 else self fi
+
+Create FormantGrid... 116 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 2500 else self fi
+Formula (frequencies)... if row = 3 then 3500 else self fi
+Formula (frequencies)... if row = 4 then 4500 else self fi
+Formula (frequencies)... if row = 5 then 5500 else self fi
+
+#9th column
+Create FormantGrid... 117 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 2600 else self fi
+Formula (frequencies)... if row = 3 then 3600 else self fi
+Formula (frequencies)... if row = 4 then 4600 else self fi
+Formula (frequencies)... if row = 5 then 5600 else self fi
+
+Create FormantGrid... 118 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 2700 else self fi
+Formula (frequencies)... if row = 3 then 3700 else self fi
+Formula (frequencies)... if row = 4 then 4700 else self fi
+Formula (frequencies)... if row = 5 then 5700 else self fi
+
+#10th column
+Create FormantGrid... 119 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 2800 else self fi
+Formula (frequencies)... if row = 3 then 3800 else self fi
+Formula (frequencies)... if row = 4 then 4800 else self fi
+Formula (frequencies)... if row = 5 then 5800 else self fi
+
+Create FormantGrid... 120 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 2900 else self fi
+Formula (frequencies)... if row = 3 then 3900 else self fi
+Formula (frequencies)... if row = 4 then 4900 else self fi
+Formula (frequencies)... if row = 5 then 5900 else self fi
+
+#11th column
+Create FormantGrid... 121 0.005 0.145 5 280 50 50 50
+Formula (frequencies)... if row = 2 then 3000 else self fi
+Formula (frequencies)... if row = 3 then 4000 else self fi
+Formula (frequencies)... if row = 4 then 5000 else self fi
+Formula (frequencies)... if row = 5 then 6000 else self fi
+
+####################################
+# Filter formant grids through glottal source #
+###################################
+
+for i from 1 to 21
+	each = 'i' + 100
+	select Sound source
+	plus FormantGrid 'each'
+	Filter
+	Rename... 'each'
+endfor
+
+##########
+# clean up #
+#########
+
+select Sound source
+Remove
+
+for i from 1 to 11
+	each = 'i' + 100
+	select FormantGrid 'each'
+	Remove
+endfor

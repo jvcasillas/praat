@@ -1,0 +1,162 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 109.98 
+tiers? <exists> 
+size = 1 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Formants/Dur" 
+        xmin = 0 
+        xmax = 109.98 
+        intervals: size = 37 
+        intervals [1]:
+            xmin = 0 
+            xmax = 3.7941516570950706 
+            text = " " 
+        intervals [2]:
+            xmin = 3.7941516570950706 
+            xmax = 4.178150058837024 
+            text = "F_N_heed_1" 
+        intervals [3]:
+            xmin = 4.178150058837024 
+            xmax = 5.198402237009541 
+            text = "" 
+        intervals [4]:
+            xmin = 5.198402237009541 
+            xmax = 5.63208415568241 
+            text = "F_N_heed_2" 
+        intervals [5]:
+            xmin = 5.63208415568241 
+            xmax = 6.879886773016279 
+            text = "" 
+        intervals [6]:
+            xmin = 6.879886773016279 
+            xmax = 7.148508416958372 
+            text = "F_N_hid_1" 
+        intervals [7]:
+            xmin = 7.148508416958372 
+            xmax = 8.339128462423863 
+            text = "" 
+        intervals [8]:
+            xmin = 8.339128462423863 
+            xmax = 8.63899270908568 
+            text = "F_N_hid_2" 
+        intervals [9]:
+            xmin = 8.63899270908568 
+            xmax = 12.954986566415887 
+            text = "" 
+        intervals [10]:
+            xmin = 12.954986566415887 
+            xmax = 13.209528234878917 
+            text = "F_N_head_1" 
+        intervals [11]:
+            xmin = 13.209528234878917 
+            xmax = 14.44742200147001 
+            text = "" 
+        intervals [12]:
+            xmin = 14.44742200147001 
+            xmax = 14.651661540058003 
+            text = "F_N_head_2" 
+        intervals [13]:
+            xmin = 14.651661540058003 
+            xmax = 16.00921315629009 
+            text = "" 
+        intervals [14]:
+            xmin = 16.00921315629009 
+            xmax = 16.36604815713515 
+            text = "F_N_had_1" 
+        intervals [15]:
+            xmin = 16.36604815713515 
+            xmax = 17.3420219553417 
+            text = "" 
+        intervals [16]:
+            xmin = 17.3420219553417 
+            xmax = 17.692607251054227 
+            text = "F_N_had_2" 
+        intervals [17]:
+            xmin = 17.692607251054227 
+            xmax = 19.0372067907648 
+            text = "" 
+        intervals [18]:
+            xmin = 19.0372067907648 
+            xmax = 19.403619036725146 
+            text = "F_N_hod_1" 
+        intervals [19]:
+            xmin = 19.403619036725146 
+            xmax = 20.344441034022193 
+            text = "" 
+        intervals [20]:
+            xmin = 20.344441034022193 
+            xmax = 20.727949435689922 
+            text = "F_N_hod_2" 
+        intervals [21]:
+            xmin = 20.727949435689922 
+            xmax = 24.745125738808294 
+            text = "" 
+        intervals [22]:
+            xmin = 24.745125738808294 
+            xmax = 25.017341800401528 
+            text = "F_N_hood_1" 
+        intervals [23]:
+            xmin = 25.017341800401528 
+            xmax = 26.080007668987136 
+            text = "" 
+        intervals [24]:
+            xmin = 26.080007668987136 
+            xmax = 26.328975472478287 
+            text = "F_N_hood_2" 
+        intervals [25]:
+            xmin = 26.328975472478287 
+            xmax = 27.733912536474396 
+            text = "" 
+        intervals [26]:
+            xmin = 27.733912536474396 
+            xmax = 28.14435868408568 
+            text = "F_N_who'd_1" 
+        intervals [27]:
+            xmin = 28.14435868408568 
+            xmax = 29.00557115610146 
+            text = "" 
+        intervals [28]:
+            xmin = 29.00557115610146 
+            xmax = 29.444755444914005 
+            text = "F_N_who'd_2" 
+        intervals [29]:
+            xmin = 29.444755444914005 
+            xmax = 30.393855392092522 
+            text = "" 
+        intervals [30]:
+            xmin = 30.393855392092522 
+            xmax = 30.67184525984957 
+            text = "F_N_hud_1" 
+        intervals [31]:
+            xmin = 30.67184525984957 
+            xmax = 31.6350248399306 
+            text = "" 
+        intervals [32]:
+            xmin = 31.6350248399306 
+            xmax = 31.89862329323552 
+            text = "F_N_hud_2" 
+        intervals [33]:
+            xmin = 31.89862329323552 
+            xmax = 33.052720074140474 
+            text = "" 
+        intervals [34]:
+            xmin = 33.052720074140474 
+            xmax = 33.3796172100951 
+            text = "F_N_heard_1" 
+        intervals [35]:
+            xmin = 33.3796172100951 
+            xmax = 34.35187243017581 
+            text = "" 
+        intervals [36]:
+            xmin = 34.35187243017581 
+            xmax = 34.71023319962981 
+            text = "F_N_heard_2" 
+        intervals [37]:
+            xmin = 34.71023319962981 
+            xmax = 109.98 
+            text = "" 

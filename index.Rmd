@@ -1,10 +1,11 @@
 ---
 title       : 'Praat'
-author      : 'Joseph V. Casillas'
-hitheme     : solarized_light
-mode        : selfcontained
-github      : {user: jvcasill, repo: praat, branch: gh-pages}
+author      : 'Joseph V. Casillas, PhD'
 ---
+
+## Overview
+
+This is a collection of tutorials and scripts for working in Praat. 
 
 ## Slides
 
@@ -13,31 +14,36 @@ slides = dir('slides', full = TRUE)
 links = paste0("- ", 
   "[", basename(slides), "]", "(", slides, "/index.html)"
 )
-last <- length(links)
-last2 <- length(links) - 1
-writeLines(links[-c(1, 2, last, last2)])
+total <- length(links)
+keep <- total - 2
+writeLines(links[1:keep])
 ```
 
 </br> 
 
+## Scripts
+
+```{r echo = F, results = 'asis', cache=FALSE}
+scripts = dir('./site_libs/assets/scripts', full = TRUE)
+links = paste0("- ", "[", basename(strtrim(scripts, nchar(scripts)-6)), "]", 
+			   "(", scripts, ")")
+writeLines(links)
+```
+
+</br>
 
 ## Misc
 
 ### Links
 
-- [Phonetics flash cards](https://quizlet.com/93374714/fonetica-flash-cards/)
+- [Praat official website](http://www.fon.hum.uva.nl/praat/)
 - Los sonidos del habla - Universidad de Iowa ([inglés](http://soundsofspeech.uiowa.edu/english/english.html), [español](http://soundsofspeech.uiowa.edu/spanish/spanish.html))
-- [Mi página web personal](http://www.jvcasillas.com)
-- [A course in phonetics](http://linguistics.berkeley.edu/acip/)
-- [What should we call linguistics](http://whatshouldwecalllinguistics.tumblr.com)
-- [All things linguistic](http://allthingslinguistic.com)
 
 </br> 
 
 ### Articles
 
-- [So you know a linguist](http://www.slideshare.net/Jayelem/so-you-know-a-linguist)
-- El español de EE.UU.
+- Coming soon
 
 
 </br> 
@@ -45,13 +51,15 @@ writeLines(links[-c(1, 2, last, last2)])
 
 ## References
 
+- Coming soon
+
 ```{r, eval=TRUE, echo=FALSE, cache=FALSE}
 library(RefManageR)
-bib <- ReadBib("./libraries/assets/refs/phon340bib.bib", check = FALSE)
+bib <- ReadBib("./site_libs/assets/refs/phon340bib.bib", check = FALSE)
 ```
 
 
-```{r, results='asis', echo=FALSE, eval=TRUE}
+```{r, results='asis', echo=FALSE, eval=FALSE}
 ui <- "-"
 writeLines(ui); print(bib[key = "Colina"], .opts = list(check.entries = FALSE, 
 					  style = "html", bib.style = "authoryear"))

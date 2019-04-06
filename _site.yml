@@ -1,0 +1,26 @@
+name: "Praat"
+output_dir: "."
+navbar:
+  title: "Praat tutorials"
+  left:
+    - text: "Overview"
+      href: "#overview"
+    - text: "Slides"
+      href: "#slides"
+    - text: "Scripts"
+      href: "#scripts"
+    - text: "Misc."
+      href: "#misc"
+  right: 
+    - icon: fa-github fa-lg
+      href: https://github.com/jvcasill/praat
+    - icon: glyphicon-envelope
+      href: mailto:joseph.casillas@rutgers.edu
+    - icon: glyphicon-home
+      href: http://www.jvcasillas.com
+output:
+  html_document:
+    theme: spacelab
+    highlight: textmate
+    include:
+      after_body: site_libs/includes/after_body.html
