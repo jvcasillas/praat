@@ -140,7 +140,7 @@ Get value at time: 1, 0.12, "Hertz", "Linear"
 ##################
 
 # COMPLETE PATHS
-# When writting scripts you will often have to refer 
+# When writing scripts you will often have to refer 
 # to the PATH to where your folders and files of interest 
 # are located on your computer. They way you write the 
 # path depends on what type of computer you have. 

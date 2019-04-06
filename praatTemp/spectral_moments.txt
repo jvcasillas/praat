@@ -1,0 +1,111 @@
+# Calculate spectral moments
+#
+# Requirements:
+# - directory with wav and textgrid files
+# - one target sound per file
+# - first (!) tier of textgrids:
+#		interval 1: empty
+#		interval 2: SAMPA transcription of the target sound
+#		interval 3: empty
+#
+# jm 2011-05-13
+
+# specify target sounds (SAMPA); adapt to your requirements
+fricatives$ = "fvszSZCx"
+plosives$ = "pbtdkg"
+
+# Window length for fricatives (40ms) and plosives (20ms); adapt to your requirements
+windowF = 0.04
+windowP = 0.02
+
+
+directory$ = chooseDirectory$ ("Choose a directory to read from:")
+Create Strings as file list... fileList 'directory$'/*.wav
+numberOfFiles = Get number of strings
+
+clearinfo
+for ifile from 1 to numberOfFiles
+	# load files
+	select Strings fileList
+	fileName_wav$ = Get string... ifile
+	Read from file... 'directory$'/'fileName_wav$'
+	fileName$ = fileName_wav$ - ".wav"
+	Read from file... 'directory$'/'fileName$'.TextGrid
+	printline 'fileName$'
+	
+	# assess textgrid
+	select TextGrid 'fileName$'
+	start = Get starting point... 1 2
+	end = Get end point... 1 2
+	segdur = end-start
+	mid = start + (segdur/2)
+	segment$ = Get label of interval... 1 2
+	printline Dauer /'segment$'/ = 'segdur:3'
+	printline cog'tab$''tab$'sd'tab$''tab$'skew'tab$''tab$'kurt
+	
+	# define analysis window (separate for fricatives and plosives)
+	# and call spectralMoments procedure
+	if index(fricatives$, segment$)
+		# fricative onset
+		select Sound 'fileName$'
+		tx = start + windowF
+		call spectralMoments 'start' 'tx'
+		# fricative center
+		select Sound 'fileName$'
+		tx = mid - (windowF/2)
+		ty = mid + (windowF/2)
+		call spectralMoments 'tx' 'ty'
+		# fricative offset
+		select Sound 'fileName$'
+		tx = end - windowF
+		call spectralMoments 'tx' 'end'
+	elsif index(plosives$, segment$)
+		# plosive onset
+		select Sound 'fileName$'
+		tx = start + windowP
+		call spectralMoments 'start' 'tx'
+		# plosive center
+		select Sound 'fileName$'
+		tx = mid - (windowP/2)
+		ty = mid + (windowP/2)
+		# plosive offset
+		call spectralMoments 'tx' 'ty'
+		select Sound 'fileName$'
+		tx = end - windowP
+		call spectralMoments 'tx' 'end'
+	endif
+	select Sound 'fileName$'
+	plus TextGrid 'fileName$'
+	Remove
+	printline
+endfor
+select Strings fileList
+Remove
+
+# If you want to save the info window output to a file uncomment and adjust the following line
+#fappendinfo 'directory$'/info.txt
+
+# spectralMoments procedure
+procedure spectralMoments .onset .offset
+	# windowing
+	Extract part... '.onset' '.offset' Hamming 1 no
+	snd = selected ("Sound")
+	# preemphasis filter (Nissen, 2003)
+	Filter (pre-emphasis)... 100
+	sndPre = selected ("Sound")
+	# calculate spectrum
+	To Spectrum... yes
+	# extract spectral moments
+	grav = Get centre of gravity... 2
+	sdev = Get standard deviation... 2
+	skew = Get skewness... 2
+	kurt = Get kurtosis... 2
+	printline 'grav:2''tab$''sdev:2''tab$''skew:4''tab$''kurt:4'
+	plus snd
+	plus sndPre
+	Remove
+endproc
+
+# possible modifications:
+# preemphasis from 1000 Hz instead of 100 Hz?
+# additional high-pass filter (Filter (pass Hann band)... 200 0 100)?

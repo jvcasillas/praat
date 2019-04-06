@@ -1,0 +1,82 @@
+#####
+# Description:
+# Adds a trendline based on a simple linear regression analysis (Praat built-in
+# method) to an existing data plot. You can select line color, width, and style.
+#
+# Requirements:
+# Table with 2 columns. The first (left) column is considered a factor
+# (or explanatory variable) and drawn to the horizontal axis. The second
+# (right) column is treated as stochastic data (dependent variable) and is drawn
+# to the vertical axis.
+#
+# Usage:
+# Select an appropriate table and run the script.
+#
+# jm, 2014-10-10
+#####
+
+# check selected table
+table = selected ()
+nOfCols = Get number of columns
+if nOfCols <> 2
+	exitScript: "We need a table with exactly 2 columns (col1: explanatory, col2: dependent)."
+endif
+
+# ask user for graphics options
+beginPause: "Trendline"
+	optionMenu: "Line type", 1
+		option: "Solid line"
+		option: "Dotted line"
+		option: "Dashed line"
+		option: "Dashed-dotted line"
+	optionMenu: "Line color", 5
+		option: "Black"
+		option: "White"
+		option: "Red"
+		option: "Green"
+		option: "Blue"
+		option: "Yellow"
+		option: "Cyan"
+		option: "Magenta"
+		option: "Maroon"
+		option: "Lime"
+		option: "Navy"
+		option: "Teal"
+		option: "Purple"
+		option: "Olive"
+		option: "Pink"
+		option: "Silver"
+		option: "Grey"
+	natural: "Line width", 1
+clicked = endPause: "Cancel", "OK", 2, 1
+if clicked = 1
+	goto THEEND
+endif
+
+# get some table parameters
+selectObject: table
+col1$ = Get column label: 1
+col2$ = Get column label: 2
+minX = Get minimum: col1$
+maxX = Get maximum: col1$
+
+# set graphics options
+Colour: line_color$
+Line width: line_width
+do (line_type$)
+
+# linear regression analysis
+lreg = To linear regression
+lreg$ = Info
+intercept = extractNumber (lreg$, "Intercept: ")
+slope = extractNumber (lreg$, "Coefficient of factor " + col1$ + ": ")
+
+# calculate trendline coordinates and draw
+startLinFit = intercept + slope * minX
+endLinFit = intercept + slope * maxX
+Draw line: minX, startLinFit, maxX, endLinFit
+
+# clean up
+label THEEND
+nocheck removeObject: lreg
+selectObject: table

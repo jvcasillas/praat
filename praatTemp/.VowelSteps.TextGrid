@@ -1,0 +1,174 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 24 
+tiers? <exists> 
+size = 1 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "labels" 
+        xmin = 0 
+        xmax = 24 
+        intervals: size = 40 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.2 
+            text = "1_519_1780" 
+        intervals [2]:
+            xmin = 0.2 
+            xmax = 1.2 
+            text = "silence" 
+        intervals [3]:
+            xmin = 1.2 
+            xmax = 1.4 
+            text = "2_496_1781" 
+        intervals [4]:
+            xmin = 1.4 
+            xmax = 2.4 
+            text = "silence" 
+        intervals [5]:
+            xmin = 2.4 
+            xmax = 2.6 
+            text = "3_474_1771" 
+        intervals [6]:
+            xmin = 2.6 
+            xmax = 3.6 
+            text = "silence" 
+        intervals [7]:
+            xmin = 3.6 
+            xmax = 3.8000000000000003 
+            text = "4_454_1750" 
+        intervals [8]:
+            xmin = 3.8000000000000003 
+            xmax = 4.800000000000001 
+            text = "silence" 
+        intervals [9]:
+            xmin = 4.800000000000001 
+            xmax = 5.000000000000001 
+            text = "5_435_1719" 
+        intervals [10]:
+            xmin = 5.000000000000001 
+            xmax = 6.000000000000001 
+            text = "silence" 
+        intervals [11]:
+            xmin = 6.000000000000001 
+            xmax = 6.200000000000001 
+            text = "6_420_1679" 
+        intervals [12]:
+            xmin = 6.200000000000001 
+            xmax = 7.200000000000001 
+            text = "silence" 
+        intervals [13]:
+            xmin = 7.200000000000001 
+            xmax = 7.400000000000001 
+            text = "7_407_1633" 
+        intervals [14]:
+            xmin = 7.400000000000001 
+            xmax = 8.400000000000002 
+            text = "silence" 
+        intervals [15]:
+            xmin = 8.400000000000002 
+            xmax = 8.600000000000001 
+            text = "8_398_1582" 
+        intervals [16]:
+            xmin = 8.600000000000001 
+            xmax = 9.600000000000001 
+            text = "silence" 
+        intervals [17]:
+            xmin = 9.600000000000001 
+            xmax = 9.8 
+            text = "9_392_1529" 
+        intervals [18]:
+            xmin = 9.8 
+            xmax = 10.8 
+            text = "silence" 
+        intervals [19]:
+            xmin = 10.8 
+            xmax = 11 
+            text = "10_390_1475" 
+        intervals [20]:
+            xmin = 11 
+            xmax = 12 
+            text = "silence" 
+        intervals [21]:
+            xmin = 12 
+            xmax = 12.2 
+            text = "11_391_1423" 
+        intervals [22]:
+            xmin = 12.2 
+            xmax = 13.2 
+            text = "silence" 
+        intervals [23]:
+            xmin = 13.2 
+            xmax = 13.399999999999999 
+            text = "12_396_1373" 
+        intervals [24]:
+            xmin = 13.399999999999999 
+            xmax = 14.399999999999999 
+            text = "silence" 
+        intervals [25]:
+            xmin = 14.399999999999999 
+            xmax = 14.599999999999998 
+            text = "13_405_1329" 
+        intervals [26]:
+            xmin = 14.599999999999998 
+            xmax = 15.599999999999998 
+            text = "silence" 
+        intervals [27]:
+            xmin = 15.599999999999998 
+            xmax = 15.799999999999997 
+            text = "14_416_1290" 
+        intervals [28]:
+            xmin = 15.799999999999997 
+            xmax = 16.799999999999997 
+            text = "silence" 
+        intervals [29]:
+            xmin = 16.799999999999997 
+            xmax = 16.999999999999996 
+            text = "15_431_1258" 
+        intervals [30]:
+            xmin = 16.999999999999996 
+            xmax = 17.999999999999996 
+            text = "silence" 
+        intervals [31]:
+            xmin = 17.999999999999996 
+            xmax = 18.199999999999996 
+            text = "16_449_1233" 
+        intervals [32]:
+            xmin = 18.199999999999996 
+            xmax = 19.199999999999996 
+            text = "silence" 
+        intervals [33]:
+            xmin = 19.199999999999996 
+            xmax = 19.399999999999995 
+            text = "17_469_1216" 
+        intervals [34]:
+            xmin = 19.399999999999995 
+            xmax = 20.399999999999995 
+            text = "silence" 
+        intervals [35]:
+            xmin = 20.399999999999995 
+            xmax = 20.599999999999994 
+            text = "18_490_1207" 
+        intervals [36]:
+            xmin = 20.599999999999994 
+            xmax = 21.599999999999994 
+            text = "silence" 
+        intervals [37]:
+            xmin = 21.599999999999994 
+            xmax = 21.799999999999994 
+            text = "19_513_1206" 
+        intervals [38]:
+            xmin = 21.799999999999994 
+            xmax = 22.799999999999994 
+            text = "silence" 
+        intervals [39]:
+            xmin = 22.799999999999994 
+            xmax = 22.999999999999993 
+            text = "20_536_1213" 
+        intervals [40]:
+            xmin = 22.999999999999993 
+            xmax = 24 
+            text = "silence" 
