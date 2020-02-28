@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content="Joseph V. Casillas, PhD" />
@@ -86,7 +86,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -235,6 +234,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -246,18 +246,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -337,21 +325,22 @@ $(document).ready(function () {
 <h2>Overview</h2>
 <p>This is a collection of tutorials and scripts for working in Praat.</p>
 </div>
-<div id="slides" class="section level2">
-<h2>Slides</h2>
-<ul>
-<li><a href="slides/00_intro/index.html">00_intro</a></li>
-<li><a href="slides/01_vot/index.html">01_vot</a></li>
-<li><a href="slides/Makefile/index.html">Makefile</a></li>
-</ul>
-<p></br></p>
-</div>
 <div id="scripts" class="section level2">
 <h2>Scripts</h2>
 <ul>
 <li><a href="./site_libs/assets/scripts/basics.praat">basics</a></li>
 <li><a href="./site_libs/assets/scripts/easy_plot.praat">easy_plot</a></li>
-<li><a href="./site_libs/assets/scripts/quickPlot.praat">quickPlot</a></li>
+<li><a href="./site_libs/assets/scripts/quick_plot.praat">quick_plot</a></li>
+<li><a href="./site_libs/assets/scripts/strip_time.praat">strip_time</a></li>
+<li><a href="./site_libs/assets/scripts/strip_time.zip">strip_ti</a></li>
+</ul>
+<p></br></p>
+</div>
+<div id="slides" class="section level2">
+<h2>Slides</h2>
+<ul>
+<li><a href="slides/00_intro/index.html">00_intro</a></li>
+<li><a href="slides/01_vot/index.html">01_vot</a></li>
 </ul>
 <p></br></p>
 </div>
@@ -422,6 +411,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

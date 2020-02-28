@@ -250,6 +250,7 @@ endfor
 # Close 'myScript.praat' and move it to the parent 
 # directory of 'ex_project' (on the same level as 
 # 'level1'). 
+# bit.ly/praat_1 bit.ly/praat_loops_1
 
 # Set path to folder where files are
 path$ = "./MM01/"
