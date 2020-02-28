@@ -7,27 +7,29 @@ author      : 'Joseph V. Casillas, PhD'
 
 This is a collection of tutorials and scripts for working in Praat. 
 
-## Slides
-
-```{r echo = F, results = 'asis'}
-slides = dir('slides', full = TRUE)
-links = paste0("- ", 
-  "[", basename(slides), "]", "(", slides, "/index.html)"
-)
-total <- length(links)
-keep <- total - 2
-writeLines(links[1:keep])
-```
-
-</br> 
-
 ## Scripts
 
 ```{r echo = F, results = 'asis', cache=FALSE}
-scripts = dir('./site_libs/assets/scripts', full = TRUE)
-links = paste0("- ", "[", basename(strtrim(scripts, nchar(scripts)-6)), "]", 
-			   "(", scripts, ")")
+scripts <- dir('./site_libs/assets/scripts', full = TRUE)
+links   <- paste0("- ", "[", 
+                  basename(strtrim(scripts, nchar(scripts)-6)), "]", 
+                  "(", scripts, ")")
 writeLines(links)
+```
+
+</br>
+
+## Slides
+
+```{r echo = F, results = 'asis'}
+slides <- dir('slides', full = TRUE)
+links  <- paste0("- ", "[", 
+                 basename(slides), "]", "(", slides, "/index.html)")
+
+total  <- length(links)
+keep   <- total - 3
+
+writeLines(links[1:keep])
 ```
 
 </br>
