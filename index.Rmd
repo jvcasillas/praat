@@ -3,17 +3,23 @@ title       : 'Praat'
 author      : 'Joseph V. Casillas, PhD'
 ---
 
+```{r, libs, echo=F, message=F, warning=F}
+library("stringr")
+```
+
 ## Overview
 
 This is a collection of tutorials and scripts for working in Praat. 
 
+</br> 
+
 ## Scripts
 
 ```{r echo = F, results = 'asis', cache=FALSE}
-scripts <- dir('./site_libs/assets/scripts', full = TRUE)
-links   <- paste0("- ", "[", 
-                  basename(strtrim(scripts, nchar(scripts)-6)), "]", 
-                  "(", scripts, ")")
+script_paths <- dir('./site_libs/assets/scripts', full = T, pattern = ".praat")
+script_names <- dir('./site_libs/assets/scripts', full = F, pattern = ".praat") %>% 
+  str_remove(., ".praat")
+links   <- paste0("- ", "[", script_names , "]", "(", script_paths, ")")
 writeLines(links)
 ```
 
@@ -22,14 +28,13 @@ writeLines(links)
 ## Slides
 
 ```{r echo = F, results = 'asis'}
-slides <- dir('slides', full = TRUE)
-links  <- paste0("- ", "[", 
-                 basename(slides), "]", "(", slides, "/index.html)")
-
-total  <- length(links)
+slide_names <- dir('slides', full = TRUE)
+slide_links <- paste0("- ", "[", basename(slide_names), "]", "(", 
+                      slide_names, "/index.html)")
+total  <- length(slide_links)
 keep   <- total - 3
 
-writeLines(links[1:keep])
+writeLines(slide_links[1:keep])
 ```
 
 </br>
