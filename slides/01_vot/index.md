@@ -4,7 +4,7 @@ subtitle    : "Measuring VOT"
 lecnum      : "01"
 author      : "Joseph V. Casillas, PhD"
 affiliation : "Rutgers University"
-date        : "2016-12-06 17:09:20"
+date        : "2020-10-22 09:19:26"
 github      : {user: jvcasill, repo: praat}
 framework   : io2012
 highlighter : highlight.js  
@@ -219,18 +219,18 @@ time interval
 ### Spanish
 
 - Download the following files
-	- [bata](http://www.jvcasillas.com/praat/site_libs/assets/wavs/bata.wav) 
+	- [bata](https://www.jvcasillas.com/praat/site_libs/assets/wavs/bata_sp.wav) 
 	<img width='20' src="../../site_libs/assets/img/fill.png">
 	<audio controls>
-      <source src="../../site_libs/assets/wavs/bata.ogg" type="audio/ogg">
-      <source src="../../site_libs/assets/wavs/bata.wav" type="audio/mpeg">
+      <source src="../../site_libs/assets/wavs/bata_sp.ogg" type="audio/ogg">
+      <source src="../../site_libs/assets/wavs/bata_sp.wav" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-	- [pata](http://www.jvcasillas.com/praat/site_libs/assets/wavs/pata.wav) 
+	- [pata](https://www.jvcasillas.com/praat/site_libs/assets/wavs/pata_sp.wav) 
 	<img width='20' src="../../site_libs/assets/img/fill.png">
 	<audio controls>
-	  <source src="../../site_libs/assets/wavs/pata.ogg" type="audio/ogg">
-	  <source src="../../site_libs/assets/wavs/pata.wav" type="audio/mpeg">
+	  <source src="../../site_libs/assets/wavs/pata_sp.ogg" type="audio/ogg">
+	  <source src="../../site_libs/assets/wavs/pata_sp.wav" type="audio/mpeg">
 	Your browser does not support the audio element.
 	</audio>
 - Import them into Praat
@@ -359,9 +359,3 @@ the tab ```Margins``` > ```Draw inner box```
 
 - Try another [praat tutorial](http://www.jvcasillas.com/praat/)
 - Email me (joseph.casillas@rutgers.edu)
-
----
-
-## References
-
-- ref
