@@ -1,24 +1,22 @@
 ---
 title       : "Working in Praat"
 subtitle    : "Measuring VOT"
-lecnum      : "01"
 author      : "Joseph V. Casillas, PhD"
-affiliation : "Rutgers University"
-date        : "`r Sys.time()`"
-github      : {user: jvcasill, repo: praat}
-framework   : io2012
-highlighter : highlight.js  
-hitheme     : tomorrow  
-widgets     : [mathjax, quiz, bootstrap]
-mode        : selfcontained # {standalone, draft}
-knit        : slidify::knit2slides
-logo        : ru.png
-biglogo     : ru.png
-url         : {lib: "../../site_libs", assets: "../../site_libs/assets"}
+date    : "Rutgers University</br>Last update: `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    chakra: "https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js"
+    lib_dir: assets
+    css: ["hygge", "rutgers", "rutgers-fonts"]
+    nature:
+      beforeInit: ["https://www.jvcasillas.com/ru_xaringan/js/ru_xaringan.js"]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
 ---
 
-
-## About Praat
+# About Praat
 
 <div align="center">
   <img width='50%' src="../../site_libs/assets/img/praat.png">
@@ -35,7 +33,7 @@ url         : {lib: "../../site_libs", assets: "../../site_libs/assets"}
 
 ---
 
-## Overview
+# Overview
 
 <div style="float:right">
   <img width='100' src="../../site_libs/assets/img/fill.png">
@@ -53,13 +51,14 @@ url         : {lib: "../../site_libs", assets: "../../site_libs/assets"}
 - Measure VOT in word initial stops
 - Create graphics with waveforms/spectrograms and time segmentations
 
---- .segue bg:grey
+---
+class: title-slide-section-grey, middle
 
 # Voice onset time
 
 ---
 
-## Voice onset time
+# Voice onset time
 
 <div style="float:right">
   <img width='100' src="../../site_libs/assets/img/fill.png">
@@ -73,7 +72,7 @@ url         : {lib: "../../site_libs", assets: "../../site_libs/assets"}
 
 ---
 
-## Types of VOT
+# Types of VOT
 
 <div style="float:right">
   <img width='60' src="../../site_libs/assets/img/fill.png">
@@ -100,7 +99,7 @@ url         : {lib: "../../site_libs", assets: "../../site_libs/assets"}
 
 ---
 
-## Cross-linguistic differences
+# Cross-linguistic differences
 
 ### English VOT
 
@@ -116,7 +115,7 @@ url         : {lib: "../../site_libs", assets: "../../site_libs/assets"}
 
 ---
 
-## Spanish vs. English
+# Spanish vs. English
 
 </br>
 
@@ -124,23 +123,24 @@ url         : {lib: "../../site_libs", assets: "../../site_libs/assets"}
   <img width='100%' src="./assets/img/sp_en_stops.png">
 </div>
 
---- .segue bg:grey
+---
+class: title-slide-section-grey, middle
 
 # Measuring VOT
 
 ---
 
-## Measuring VOT
+# Measuring VOT
 
-- VOT: <BLUE>Time interval (in ms) between the release of the stop burst and the onset of voicing</BLUE>
+- VOT: .blue[Time interval (in ms) between the release of the stop burst and the onset of voicing]
 - In the spectrogram/waveform we need to locate 2 landmarks:
-	- (1) stop release 
-	- (2) voicing onset 
-- ```Time in ms between (1) and (2) = VOT```
+  - (1) stop release 
+  - (2) voicing onset 
+- `Time in ms between (1) and (2) = VOT`
 
 ---
 
-## Measuring VOT
+# Measuring VOT
 
 ### English voiced stop (/d/ 'damper')
 
@@ -150,11 +150,11 @@ url         : {lib: "../../site_libs", assets: "../../site_libs/assets"}
 
 - (1) stop release 
 - (2) voicing onset 
-- ```Time in ms between (1) and (2) = VOT```
+- `Time in ms between (1) and (2) = VOT`
 
 ---
 
-## Measuring VOT
+# Measuring VOT
 
 ### English voiceless stop (/t/ 'taboo')
 
@@ -164,11 +164,11 @@ url         : {lib: "../../site_libs", assets: "../../site_libs/assets"}
 
 - (1) stop release 
 - (2) voicing onset 
-- ```Time in ms between (1) and (2) = VOT```
+- `Time in ms between (1) and (2) = VOT`
 
 ---
 
-## Measuring VOT
+# Measuring VOT
 
 ### Spanish voiced stop (/b/ 'bala')
 
@@ -178,11 +178,11 @@ url         : {lib: "../../site_libs", assets: "../../site_libs/assets"}
 
 - (1) stop release 
 - (2) voicing onset 
-- ```Time in ms between (1) and (2) = VOT```
+- `Time in ms between (1) and (2) = VOT`
 
 ---
 
-## Measuring VOT
+# Measuring VOT
 
 ### Spanish voiceless stop (/p/ 'pala')
 
@@ -192,7 +192,7 @@ url         : {lib: "../../site_libs", assets: "../../site_libs/assets"}
 
 - (1) stop release 
 - (2) voicing onset 
-- ```Time in ms between (1) and (2) = VOT```
+- `Time in ms between (1) and (2) = VOT`
 
 ---
 
@@ -208,7 +208,7 @@ time interval
 
 ---
 
-## Practice
+# Practice
 
 ### English
 
@@ -237,13 +237,14 @@ time interval
 - Examine the waveforms and spectrograms
 - Measure their VOT
 
---- .segue bg:grey
+---
+class: title-slide-section-grey, middle
 
 # Creating graphics
 
 ---
 
-## Creating graphics
+# Creating graphics
 
 <div style="float:right">
   <img width='70' src="../../site_libs/assets/img/fill.png">
@@ -255,91 +256,86 @@ time interval
 
 ---
 
-## Step by step approach to plotting VOT in Praat
+# Step by step approach to plotting VOT in Praat
 
-<BLUE>1</BLUE>. Select sound object you want to graph  
-<BLUE>2</BLUE>. Click ```View and Edit```
+
+### (1) Select sound object you want to graph  
+
+--
+
+### (2) Click `View and Edit`
+
+--
+
+### (3) Select desired region of recording > zoom in (`sel`)
+
+--
+
+### (4) Select VOT range (stop release to onset of voicing)
 
 ---
 
-## Step by step approach to plotting VOT in Praat
+# Step by step approach to plotting VOT in Praat
 
-<BLUE>3</BLUE>. Select desired region of recording > zoom in (```sel```)
+### (5) Draw waveform  
 
----
-
-## Step by step approach to plotting VOT in Praat
-
-<BLUE>4</BLUE>. Select VOT range (stop release to onset of voicing)
-
----
-
-## Step by step approach to plotting VOT in Praat
-
-<BLUE>5</BLUE>. Draw waveform  
-
-- ```File``` > ```Draw visible sound...```
-- Unselect ```Draw selection times``` and ```Garnish```
+- `File` > `Draw visible sound...`
+- Unselect `Draw selection times` and `Garnish`
 - Click Ok
 
 **Note**: You may have to erase (Edit > Erase all) and reselect the viewport. 
 Try to get yours to look like this and redo step 5 as necessary
 
----
+--
 
-## Step by step approach to plotting VOT in Praat
-
-<BLUE>6</BLUE>. Once you have a satisfactory waveform, without changing the viewport, select 
-the tab ```Margins``` > ```Draw inner box```
+### (6) Once you have a satisfactory waveform, without changing the viewport, select 
+the tab `Margins` > `Draw inner box`
 
 ---
 
-## Step by step approach to plotting VOT in Praat
+# Step by step approach to plotting VOT in Praat
 
-<BLUE>7</BLUE>. Next select a new rectangle in the viewport, just below the waveform
+### (7) Next select a new rectangle in the viewport, just below the waveform
 
 - Try to match yours to the rectangle in the image (use the rulers)
 
----
+--
 
-## Step by step approach to plotting VOT in Praat
-
-<BLUE>8<BLUE>. Draw the spectrogram
+### (8) Draw the spectrogram
 
 - Go back to the spectrogram window
-- Select the tab ```Spectrum``` > ```Paint visible spectrogram...```
-- Unselect ```Erase first``` and ```Draw selection times```
-- Select ```Garnish```
+- Select the tab `Spectrum` > `Paint visible spectrogram...`
+- Unselect `Erase first` and `Draw selection times`
+- Select `Garnish`
 - Click Ok
 
+--
+
+### (9) Select the waveform and the spectrogram in the viewport  
+
+### (10) Save as .pdf/.png
+
 ---
 
-## Step by step approach to plotting VOT in Praat
-
-<BLUE>9</BLUE>. Select the waveform and the spectrogram in the viewport  
-<BLUE>10</BLUE>. Save as .pdf/.png
-
----
-
-## Step by step approach to plotting VOT in Praat
+# Step by step approach to plotting VOT in Praat
 
 1. Select sound object you want to graph  
-2. Click ```View and Edit```
-3. Select desired region of recording > zoom in (```sel```)
+2. Click `View and Edit`
+3. Select desired region of recording > zoom in (`sel`)
 4. Select VOT range (stop release to onset of voicing)
 5. Draw waveform  
-	- ```File``` > ```Draw visible sound...```
+	- `File` > `Draw visible sound...`
 6. Once you have a satisfactory waveform, without changing the viewport, select 
-the tab ```Margins``` > ```Draw inner box```
+the tab `Margins` > `Draw inner box`
 7. Next select a new rectangle in the viewport, just below the waveform
 8. Draw the spectrogram
-	- Select the tab ```Spectrum``` > ```Paint visible spectrogram...```
+	- Select the tab `Spectrum` > `Paint visible spectrogram...`
 9. Select the waveform and the spectrogram in the viewport  
 10. Save as .pdf/.png
 
 ---
 
-## Conclusion
+# Conclusion
 
 <div style="float:right">
   <img width='70' src="../../site_libs/assets/img/fill.png">

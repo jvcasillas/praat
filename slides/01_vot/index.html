@@ -1,946 +1,487 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Working in Praat</title>
-  <meta charset="utf-8">
-  <meta name="description" content="Working in Praat">
-  <meta name="author" content="Joseph V. Casillas, PhD">
-  <meta name="generator" content="slidify" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <link rel="stylesheet" href="../../site_libs/frameworks/io2012/css/default.css" media="all" >
-  <link rel="stylesheet" href="../../site_libs/frameworks/io2012/css/phone.css" 
-    media="only screen and (max-device-width: 480px)" >
-  <link rel="stylesheet" href="../../site_libs/frameworks/io2012/css/slidify.css" >
-  <link rel="stylesheet" href="../../site_libs/highlighters/highlight.js/css/tomorrow.css" />
-  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="../../site_libs/widgets/quiz/css/demo.css"></link>
-<link rel=stylesheet href="../../site_libs/widgets/bootstrap/css/bootstrap.css"></link>
-<link rel=stylesheet href="./assets/css/ribbons.css"></link>
-<link rel=stylesheet href="./assets/css/style.css"></link>
-
-  
-  <!-- Grab CDN jQuery, fall back to local if offline -->
-  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
-  <script>window.jQuery || document.write('<script src="../../site_libs/widgets/quiz/js/jquery.js"><\/script>')</script> 
-  <script data-main="../../site_libs/frameworks/io2012/js/slides" 
-    src="../../site_libs/frameworks/io2012/js/require-1.0.8.min.js">
-  </script>
-  
-  
-
-</head>
-<body style="opacity: 0">
-  <slides class="layout-widescreen">
-    
-    <!-- LOGO SLIDE -->
-    
-  <slide class="nobackground">
-    <article class="flexbox vcenter">
-      <span>
-        <img width='300px' src="../../site_libs/assets/img/ru.png">
-      </span>
-    </article>
-  </slide>
-    <slide class="title-slide segue nobackground">
-  
-  <aside class="gdbar">
-    <img src="../../site_libs/assets/img/ru.png">
-  </aside>
-  
-  <hgroup class="auto-fadein">
-    <h1>Working in Praat</h1>
-    <h2>Measuring VOT</h2>
-    <p>Joseph V. Casillas, PhD<br/></p>
-  </hgroup>
-  
-    <a href="https://github.com/jvcasill/praat/zipball/gh-pages" class="example">
-     Download
-    </a>
-  
-  <article></article>  
-  
-</slide>
-    
-
-    <!-- SLIDES -->
-    <slide class="" id="slide-1" style="background:;">
-  
-  <hgroup>
-    <h2>About Praat</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <div align="center">
-  <img width='50%' src="../../site_libs/assets/img/praat.png">
-</div>
-
-<p></p>
-
-<ul>
-<li>Praat is a free, cross-platform program used in linguistics for
-
-<ul>
-<li>speech analysis, synthesis, and manipulation</li>
-<li>labeling and segmentation</li>
-<li>listening experiments</li>
-<li>statistics</li>
-</ul></li>
-<li>Download <a href="http://www.praat.org">here</a></li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-2" style="background:;">
-  
-  <hgroup>
-    <h2>Overview</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <div style="float:right">
-  <img width='100' src="../../site_libs/assets/img/fill.png">
-  <img src="../../site_libs/assets/img/pensar2.jpg">
-</div>
-
-<h3>In this tutorial you will learn about:</h3>
-
-<ul>
-<li>Voice Onset Time (VOT)</li>
-</ul>
-
-<p></br></p>
-
-<h3>You will learn how to:</h3>
-
-<ul>
-<li>Measure VOT in word initial stops</li>
-<li>Create graphics with waveforms/spectrograms and time segmentations</li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="segue" id="slide-3" style="background:grey;">
-  
-  <hgroup>
-    <h1>Voice onset time</h1>
-  </hgroup>
-  
-  <article data-timings="">
-    
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-4" style="background:;">
-  
-  <hgroup>
-    <h2>Voice onset time</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <div style="float:right">
-  <img width='100' src="../../site_libs/assets/img/fill.png">
-  <img src="../../site_libs/assets/img/confundido.png">
-</div>
-
-<ul>
-<li>Measurement (in ms) associated with stop consonants</li>
-<li>One of several acoustic correlates of voicing contrasts (i.e. &#39;bin&#39; vs. &#39;pin&#39;)</li>
-<li>Result of coordination of gestures</li>
-<li><BLUE>Time interval (in ms) between the release of the stop burst and the onset of voicing</BLUE></li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-5" style="background:;">
-  
-  <hgroup>
-    <h2>Types of VOT</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <div style="float:right">
-  <img width='60' src="../../site_libs/assets/img/fill.png">
-  <img width='400' src="./assets/img/vot_oscillograms.png">
-</div>
-
-<h3>Three phonetic realizations of voicing</h3>
-
-<ul>
-<li><strong>Lead</strong> (negative) VOT: voicing begins before release of stop (approx. -60ms)</li>
-<li><strong>Short-lag</strong> (positive) VOT: short time interval after release of stop before onset of voicing (0ms to 30ms)</li>
-<li><strong>Long-lag</strong> (positive) VOT: longer time interval after release of stop before onset of voicing (approx. 60ms) </li>
-</ul>
-
-<h3>Cross-linguistic differences</h3>
-
-<ul>
-<li>What constitutes a phonologically voiced or voiceless stop is language-specific</li>
-<li>Average VOT values vary depending on language, speaker, phonetic context, etc.</li>
-<li>That said, they typically fall in a variety-specific range</li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-6" style="background:;">
-  
-  <article data-timings="">
-    <div align="center">
-  <img width='700' src="./assets/img/vot_oscillograms.png">
-</div>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-7" style="background:;">
-  
-  <hgroup>
-    <h2>Cross-linguistic differences</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <h3>English VOT</h3>
-
-<ul>
-<li>English has a two-way voicing contrast 
-
-<ul>
-<li>Phonologically voiced stops realized with <strong>short-lag</strong> VOT</li>
-<li>Phonologically voiceless stops realized with <BLUE>long-lag</BLUE> VOT</li>
-</ul></li>
-</ul>
-
-<h3>Spanish VOT</h3>
-
-<ul>
-<li>Spanish has a two-way voicing contrast
-
-<ul>
-<li>Phonologically voiced stops realized with <strong>lead</strong> VOT</li>
-<li>Phonologically voiceless stop realized with <BLUE>short-lag</BLUE> VOT</li>
-</ul></li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-8" style="background:;">
-  
-  <hgroup>
-    <h2>Spanish vs. English</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <p></br></p>
-
-<div align="center">
-  <img width='100%' src="./assets/img/sp_en_stops.png">
-</div>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="segue" id="slide-9" style="background:grey;">
-  
-  <hgroup>
-    <h1>Measuring VOT</h1>
-  </hgroup>
-  
-  <article data-timings="">
-    
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-10" style="background:;">
-  
-  <hgroup>
-    <h2>Measuring VOT</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <ul>
-<li>VOT: <BLUE>Time interval (in ms) between the release of the stop burst and the onset of voicing</BLUE></li>
-<li>In the spectrogram/waveform we need to locate 2 landmarks:
-
-<ul>
-<li>(1) stop release </li>
-<li>(2) voicing onset </li>
-</ul></li>
-<li><code>Time in ms between (1) and (2) = VOT</code></li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-11" style="background:;">
-  
-  <hgroup>
-    <h2>Measuring VOT</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <h3>English voiced stop (/d/ &#39;damper&#39;)</h3>
-
-<div align="center">
-  <img width='700' src="./assets/img/damper.png">
-</div>
-
-<ul>
-<li>(1) stop release </li>
-<li>(2) voicing onset </li>
-<li><code>Time in ms between (1) and (2) = VOT</code></li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-12" style="background:;">
-  
-  <hgroup>
-    <h2>Measuring VOT</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <h3>English voiceless stop (/t/ &#39;taboo&#39;)</h3>
-
-<div align="center">
-  <img width='700' src="./assets/img/taboo.png">
-</div>
-
-<ul>
-<li>(1) stop release </li>
-<li>(2) voicing onset </li>
-<li><code>Time in ms between (1) and (2) = VOT</code></li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-13" style="background:;">
-  
-  <hgroup>
-    <h2>Measuring VOT</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <h3>Spanish voiced stop (/b/ &#39;bala&#39;)</h3>
-
-<div align="center">
-  <img width='700' src="./assets/img/bala.png">
-</div>
-
-<ul>
-<li>(1) stop release </li>
-<li>(2) voicing onset </li>
-<li><code>Time in ms between (1) and (2) = VOT</code></li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-14" style="background:;">
-  
-  <hgroup>
-    <h2>Measuring VOT</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <h3>Spanish voiceless stop (/p/ &#39;pala&#39;)</h3>
-
-<div align="center">
-  <img width='700' src="./assets/img/pala.png">
-</div>
-
-<ul>
-<li>(1) stop release </li>
-<li>(2) voicing onset </li>
-<li><code>Time in ms between (1) and (2) = VOT</code></li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-15" style="background:;">
-  
-  <article data-timings="">
-    <div align="center">
-  <img width='700' src="./assets/img/ex_aspiration.png">
-</div>
-
-<p></p>
-
-<ul>
-<li>When you select the voicing onset and the stop release, Praat will automatically give you the 
-time interval</li>
-<li>The VOT is 64ms for this particular English /p/ (long-lag VOT)</li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-16" style="background:;">
-  
-  <hgroup>
-    <h2>Practice</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <h3>English</h3>
-
-<ul>
-<li>Create recordings of the words &#39;bin&#39; and &#39;pin&#39; in English</li>
-<li>Examine the waveforms and spectrograms</li>
-<li>Measure their VOT</li>
-</ul>
-
-<h3>Spanish</h3>
-
-<ul>
-<li>Download the following files
-
-<ul>
-<li><a href="https://www.jvcasillas.com/praat/site_libs/assets/wavs/bata_sp.wav">bata</a> 
-<img width='20' src="../../site_libs/assets/img/fill.png">
-<audio controls>
-<source src="../../site_libs/assets/wavs/bata_sp.ogg" type="audio/ogg">
-<source src="../../site_libs/assets/wavs/bata_sp.wav" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio></li>
-<li><a href="https://www.jvcasillas.com/praat/site_libs/assets/wavs/pata_sp.wav">pata</a> 
-<img width='20' src="../../site_libs/assets/img/fill.png">
-<audio controls>
-<source src="../../site_libs/assets/wavs/pata_sp.ogg" type="audio/ogg">
-<source src="../../site_libs/assets/wavs/pata_sp.wav" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio></li>
-</ul></li>
-<li>Import them into Praat</li>
-<li>Examine the waveforms and spectrograms</li>
-<li>Measure their VOT</li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="segue" id="slide-17" style="background:grey;">
-  
-  <hgroup>
-    <h1>Creating graphics</h1>
-  </hgroup>
-  
-  <article data-timings="">
-    
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-18" style="background:;">
-  
-  <hgroup>
-    <h2>Creating graphics</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <div style="float:right">
-  <img width='70' src="../../site_libs/assets/img/fill.png">
-  <img width='400' src="../../site_libs/assets/img/no.gif">
-</div>
-
-<ul>
-<li><strong>No screenshots</strong></li>
-<li>Praat has exceptional graphing capabilities</li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-19" style="background:;">
-  
-  <hgroup>
-    <h2>Step by step approach to plotting VOT in Praat</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <p><BLUE>1</BLUE>. Select sound object you want to graph<br>
-<BLUE>2</BLUE>. Click <code>View and Edit</code></p>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-20" style="background:;">
-  
-  <hgroup>
-    <h2>Step by step approach to plotting VOT in Praat</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <p><BLUE>3</BLUE>. Select desired region of recording &gt; zoom in (<code>sel</code>)</p>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-21" style="background:;">
-  
-  <hgroup>
-    <h2>Step by step approach to plotting VOT in Praat</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <p><BLUE>4</BLUE>. Select VOT range (stop release to onset of voicing)</p>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-22" style="background:;">
-  
-  <hgroup>
-    <h2>Step by step approach to plotting VOT in Praat</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <p><BLUE>5</BLUE>. Draw waveform  </p>
-
-<ul>
-<li><code>File</code> &gt; <code>Draw visible sound...</code></li>
-<li>Unselect <code>Draw selection times</code> and <code>Garnish</code></li>
-<li>Click Ok</li>
-</ul>
-
-<p><strong>Note</strong>: You may have to erase (Edit &gt; Erase all) and reselect the viewport. 
-Try to get yours to look like this and redo step 5 as necessary</p>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-23" style="background:;">
-  
-  <hgroup>
-    <h2>Step by step approach to plotting VOT in Praat</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <p><BLUE>6</BLUE>. Once you have a satisfactory waveform, without changing the viewport, select 
-the tab <code>Margins</code> &gt; <code>Draw inner box</code></p>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-24" style="background:;">
-  
-  <hgroup>
-    <h2>Step by step approach to plotting VOT in Praat</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <p><BLUE>7</BLUE>. Next select a new rectangle in the viewport, just below the waveform</p>
-
-<ul>
-<li>Try to match yours to the rectangle in the image (use the rulers)</li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-25" style="background:;">
-  
-  <hgroup>
-    <h2>Step by step approach to plotting VOT in Praat</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <p><BLUE>8<BLUE>. Draw the spectrogram</p>
-
-<ul>
-<li>Go back to the spectrogram window</li>
-<li>Select the tab <code>Spectrum</code> &gt; <code>Paint visible spectrogram...</code></li>
-<li>Unselect <code>Erase first</code> and <code>Draw selection times</code></li>
-<li>Select <code>Garnish</code></li>
-<li>Click Ok</li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-26" style="background:;">
-  
-  <hgroup>
-    <h2>Step by step approach to plotting VOT in Praat</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <p><BLUE>9</BLUE>. Select the waveform and the spectrogram in the viewport<br>
-<BLUE>10</BLUE>. Save as .pdf/.png</p>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-27" style="background:;">
-  
-  <hgroup>
-    <h2>Step by step approach to plotting VOT in Praat</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <ol>
-<li>Select sound object you want to graph<br></li>
-<li>Click <code>View and Edit</code></li>
-<li>Select desired region of recording &gt; zoom in (<code>sel</code>)</li>
-<li>Select VOT range (stop release to onset of voicing)</li>
-<li>Draw waveform<br>
-
-<ul>
-<li><code>File</code> &gt; <code>Draw visible sound...</code></li>
-</ul></li>
-<li>Once you have a satisfactory waveform, without changing the viewport, select 
-the tab <code>Margins</code> &gt; <code>Draw inner box</code></li>
-<li>Next select a new rectangle in the viewport, just below the waveform</li>
-<li>Draw the spectrogram
-
-<ul>
-<li>Select the tab <code>Spectrum</code> &gt; <code>Paint visible spectrogram...</code></li>
-</ul></li>
-<li>Select the waveform and the spectrogram in the viewport<br></li>
-<li>Save as .pdf/.png</li>
-</ol>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-<slide class="" id="slide-28" style="background:;">
-  
-  <hgroup>
-    <h2>Conclusion</h2>
-  </hgroup>
-  
-  <article data-timings="">
-    <div style="float:right">
-  <img width='70' src="../../site_libs/assets/img/fill.png">
-  <img width='400' src="../../site_libs/assets/img/ba.gif">
-</div>
-
-<h3>In this short tutorial you learned about:</h3>
-
-<ul>
-<li>Voice Onset Time (VOT)</li>
-</ul>
-
-<h3>and now you are able to:</h3>
-
-<ul>
-<li>Measure VOT in word initial stops</li>
-<li>Create graphics with waveforms/spectrograms and time segmentations</li>
-</ul>
-
-<h3>Additional help</h3>
-
-<ul>
-<li>Try another <a href="http://www.jvcasillas.com/praat/">praat tutorial</a></li>
-<li>Email me (<a href="mailto:joseph.casillas@rutgers.edu">joseph.casillas@rutgers.edu</a>)</li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-  
-</slide>
-
-    <slide class="backdrop"></slide>
-  </slides>
-  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
-    <ul>
-      
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='About Praat'>
-         1
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Overview'>
-         2
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Voice onset time'>
-         3
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Voice onset time'>
-         4
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Types of VOT'>
-         5
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='NA'>
-         6
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Cross-linguistic differences'>
-         7
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Spanish vs. English'>
-         8
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='Measuring VOT'>
-         9
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='Measuring VOT'>
-         10
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='Measuring VOT'>
-         11
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='Measuring VOT'>
-         12
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='Measuring VOT'>
-         13
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='Measuring VOT'>
-         14
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='NA'>
-         15
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=16 title='Practice'>
-         16
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='Creating graphics'>
-         17
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title='Creating graphics'>
-         18
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='Step by step approach to plotting VOT in Praat'>
-         19
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='Step by step approach to plotting VOT in Praat'>
-         20
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='Step by step approach to plotting VOT in Praat'>
-         21
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title='Step by step approach to plotting VOT in Praat'>
-         22
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=23 title='Step by step approach to plotting VOT in Praat'>
-         23
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=24 title='Step by step approach to plotting VOT in Praat'>
-         24
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=25 title='Step by step approach to plotting VOT in Praat'>
-         25
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=26 title='Step by step approach to plotting VOT in Praat'>
-         26
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=27 title='Step by step approach to plotting VOT in Praat'>
-         27
-      </a>
-    </li>
-    
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=28 title='Conclusion'>
-         28
-      </a>
-    </li>
-    
-    </ul>
-  </div>  <!--[if IE]>
-    <script 
-      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
-    </script>
-    <script>CFInstall.check({mode: 'overlay'});</script>
-  <![endif]-->
-</body>
-  <!-- Load Javascripts for Widgets -->
-  <script src="../../site_libs/widgets/quiz/js/jquery.quiz.js"></script>
-<script src="../../site_libs/widgets/quiz/js/mustache.min.js"></script>
-<script src="../../site_libs/widgets/quiz/js/quiz-app.js"></script>
-<script src="../../site_libs/widgets/bootstrap/js/bootstrap.min.js"></script>
-<script src="../../site_libs/widgets/bootstrap/js/bootbox.min.js"></script>
-
-  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [['$','$'], ['\\(','\\)']],
-        processEscapes: true
+<html lang="" xml:lang="">
+  <head>
+    <title>Working in Praat</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Joseph V. Casillas, PhD" />
+    <script src="assets/header-attrs-2.5/header-attrs.js"></script>
+    <link href="assets/remark-css-0.0.1/hygge.css" rel="stylesheet" />
+    <link href="assets/remark-css-0.0.1/rutgers.css" rel="stylesheet" />
+    <link href="assets/remark-css-0.0.1/rutgers-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Working in Praat
+## Measuring VOT
+### Joseph V. Casillas, PhD
+### Rutgers University</br>Last update: 2020-10-22
+
+---
+
+
+# About Praat
+
+&lt;div align="center"&gt;
+  &lt;img width='50%' src="../../site_libs/assets/img/praat.png"&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+- Praat is a free, cross-platform program used in linguistics for
+  - speech analysis, synthesis, and manipulation
+  - labeling and segmentation
+  - listening experiments
+  - statistics
+- Download [here](http://www.praat.org)
+
+---
+
+# Overview
+
+&lt;div style="float:right"&gt;
+  &lt;img width='100' src="../../site_libs/assets/img/fill.png"&gt;
+  &lt;img src="../../site_libs/assets/img/pensar2.jpg"&gt;
+&lt;/div&gt;
+
+### In this tutorial you will learn about:
+
+- Voice Onset Time (VOT)
+
+&lt;/br&gt;
+
+### You will learn how to:
+
+- Measure VOT in word initial stops
+- Create graphics with waveforms/spectrograms and time segmentations
+
+---
+class: title-slide-section-grey, middle
+
+# Voice onset time
+
+---
+
+# Voice onset time
+
+&lt;div style="float:right"&gt;
+  &lt;img width='100' src="../../site_libs/assets/img/fill.png"&gt;
+  &lt;img src="../../site_libs/assets/img/confundido.png"&gt;
+&lt;/div&gt;
+
+- Measurement (in ms) associated with stop consonants
+- One of several acoustic correlates of voicing contrasts (i.e. 'bin' vs. 'pin')
+- Result of coordination of gestures
+- &lt;BLUE&gt;Time interval (in ms) between the release of the stop burst and the onset of voicing&lt;/BLUE&gt;
+
+---
+
+# Types of VOT
+
+&lt;div style="float:right"&gt;
+  &lt;img width='60' src="../../site_libs/assets/img/fill.png"&gt;
+  &lt;img width='400' src="./assets/img/vot_oscillograms.png"&gt;
+&lt;/div&gt;
+
+### Three phonetic realizations of voicing
+
+- **Lead** (negative) VOT: voicing begins before release of stop (approx. -60ms)
+- **Short-lag** (positive) VOT: short time interval after release of stop before onset of voicing (0ms to 30ms)
+- **Long-lag** (positive) VOT: longer time interval after release of stop before onset of voicing (approx. 60ms) 
+
+### Cross-linguistic differences
+
+- What constitutes a phonologically voiced or voiceless stop is language-specific
+- Average VOT values vary depending on language, speaker, phonetic context, etc.
+- That said, they typically fall in a variety-specific range
+
+---
+
+&lt;div align="center"&gt;
+  &lt;img width='700' src="./assets/img/vot_oscillograms.png"&gt;
+&lt;/div&gt;
+
+---
+
+# Cross-linguistic differences
+
+### English VOT
+
+- English has a two-way voicing contrast 
+	- Phonologically voiced stops realized with **short-lag** VOT
+	- Phonologically voiceless stops realized with &lt;BLUE&gt;long-lag&lt;/BLUE&gt; VOT
+
+### Spanish VOT
+
+- Spanish has a two-way voicing contrast
+	- Phonologically voiced stops realized with **lead** VOT
+	- Phonologically voiceless stop realized with &lt;BLUE&gt;short-lag&lt;/BLUE&gt; VOT
+
+---
+
+# Spanish vs. English
+
+&lt;/br&gt;
+
+&lt;div align="center"&gt;
+  &lt;img width='100%' src="./assets/img/sp_en_stops.png"&gt;
+&lt;/div&gt;
+
+---
+class: title-slide-section-grey, middle
+
+# Measuring VOT
+
+---
+
+# Measuring VOT
+
+- VOT: .blue[Time interval (in ms) between the release of the stop burst and the onset of voicing]
+- In the spectrogram/waveform we need to locate 2 landmarks:
+  - (1) stop release 
+  - (2) voicing onset 
+- `Time in ms between (1) and (2) = VOT`
+
+---
+
+# Measuring VOT
+
+### English voiced stop (/d/ 'damper')
+
+&lt;div align="center"&gt;
+  &lt;img width='700' src="./assets/img/damper.png"&gt;
+&lt;/div&gt;
+
+- (1) stop release 
+- (2) voicing onset 
+- `Time in ms between (1) and (2) = VOT`
+
+---
+
+# Measuring VOT
+
+### English voiceless stop (/t/ 'taboo')
+
+&lt;div align="center"&gt;
+  &lt;img width='700' src="./assets/img/taboo.png"&gt;
+&lt;/div&gt;
+
+- (1) stop release 
+- (2) voicing onset 
+- `Time in ms between (1) and (2) = VOT`
+
+---
+
+# Measuring VOT
+
+### Spanish voiced stop (/b/ 'bala')
+
+&lt;div align="center"&gt;
+  &lt;img width='700' src="./assets/img/bala.png"&gt;
+&lt;/div&gt;
+
+- (1) stop release 
+- (2) voicing onset 
+- `Time in ms between (1) and (2) = VOT`
+
+---
+
+# Measuring VOT
+
+### Spanish voiceless stop (/p/ 'pala')
+
+&lt;div align="center"&gt;
+  &lt;img width='700' src="./assets/img/pala.png"&gt;
+&lt;/div&gt;
+
+- (1) stop release 
+- (2) voicing onset 
+- `Time in ms between (1) and (2) = VOT`
+
+---
+
+&lt;div align="center"&gt;
+  &lt;img width='700' src="./assets/img/ex_aspiration.png"&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+- When you select the voicing onset and the stop release, Praat will automatically give you the 
+time interval
+- The VOT is 64ms for this particular English /p/ (long-lag VOT)
+
+---
+
+# Practice
+
+### English
+
+- Create recordings of the words 'bin' and 'pin' in English
+- Examine the waveforms and spectrograms
+- Measure their VOT
+
+### Spanish
+
+- Download the following files
+	- [bata](https://www.jvcasillas.com/praat/site_libs/assets/wavs/bata_sp.wav) 
+	&lt;img width='20' src="../../site_libs/assets/img/fill.png"&gt;
+	&lt;audio controls&gt;
+      &lt;source src="../../site_libs/assets/wavs/bata_sp.ogg" type="audio/ogg"&gt;
+      &lt;source src="../../site_libs/assets/wavs/bata_sp.wav" type="audio/mpeg"&gt;
+      Your browser does not support the audio element.
+    &lt;/audio&gt;
+	- [pata](https://www.jvcasillas.com/praat/site_libs/assets/wavs/pata_sp.wav) 
+	&lt;img width='20' src="../../site_libs/assets/img/fill.png"&gt;
+	&lt;audio controls&gt;
+	  &lt;source src="../../site_libs/assets/wavs/pata_sp.ogg" type="audio/ogg"&gt;
+	  &lt;source src="../../site_libs/assets/wavs/pata_sp.wav" type="audio/mpeg"&gt;
+	Your browser does not support the audio element.
+	&lt;/audio&gt;
+- Import them into Praat
+- Examine the waveforms and spectrograms
+- Measure their VOT
+
+---
+class: title-slide-section-grey, middle
+
+# Creating graphics
+
+---
+
+# Creating graphics
+
+&lt;div style="float:right"&gt;
+  &lt;img width='70' src="../../site_libs/assets/img/fill.png"&gt;
+  &lt;img width='400' src="../../site_libs/assets/img/no.gif"&gt;
+&lt;/div&gt;
+
+- **No screenshots**
+- Praat has exceptional graphing capabilities
+
+---
+
+# Step by step approach to plotting VOT in Praat
+
+
+### (1) Select sound object you want to graph  
+
+--
+
+### (2) Click `View and Edit`
+
+--
+
+### (3) Select desired region of recording &gt; zoom in (`sel`)
+
+--
+
+### (4) Select VOT range (stop release to onset of voicing)
+
+---
+
+# Step by step approach to plotting VOT in Praat
+
+### (5) Draw waveform  
+
+- `File` &gt; `Draw visible sound...`
+- Unselect `Draw selection times` and `Garnish`
+- Click Ok
+
+**Note**: You may have to erase (Edit &gt; Erase all) and reselect the viewport. 
+Try to get yours to look like this and redo step 5 as necessary
+
+--
+
+### (6) Once you have a satisfactory waveform, without changing the viewport, select 
+the tab `Margins` &gt; `Draw inner box`
+
+---
+
+# Step by step approach to plotting VOT in Praat
+
+### (7) Next select a new rectangle in the viewport, just below the waveform
+
+- Try to match yours to the rectangle in the image (use the rulers)
+
+--
+
+### (8) Draw the spectrogram
+
+- Go back to the spectrogram window
+- Select the tab `Spectrum` &gt; `Paint visible spectrogram...`
+- Unselect `Erase first` and `Draw selection times`
+- Select `Garnish`
+- Click Ok
+
+--
+
+### (9) Select the waveform and the spectrogram in the viewport  
+
+### (10) Save as .pdf/.png
+
+---
+
+# Step by step approach to plotting VOT in Praat
+
+1. Select sound object you want to graph  
+2. Click `View and Edit`
+3. Select desired region of recording &gt; zoom in (`sel`)
+4. Select VOT range (stop release to onset of voicing)
+5. Draw waveform  
+	- `File` &gt; `Draw visible sound...`
+6. Once you have a satisfactory waveform, without changing the viewport, select 
+the tab `Margins` &gt; `Draw inner box`
+7. Next select a new rectangle in the viewport, just below the waveform
+8. Draw the spectrogram
+	- Select the tab `Spectrum` &gt; `Paint visible spectrogram...`
+9. Select the waveform and the spectrogram in the viewport  
+10. Save as .pdf/.png
+
+---
+
+# Conclusion
+
+&lt;div style="float:right"&gt;
+  &lt;img width='70' src="../../site_libs/assets/img/fill.png"&gt;
+  &lt;img width='400' src="../../site_libs/assets/img/ba.gif"&gt;
+&lt;/div&gt;
+
+### In this short tutorial you learned about:
+
+- Voice Onset Time (VOT)
+
+### and now you are able to:
+
+- Measure VOT in word initial stops
+- Create graphics with waveforms/spectrograms and time segmentations
+
+### Additional help
+
+- Try another [praat tutorial](http://www.jvcasillas.com/praat/)
+- Email me (joseph.casillas@rutgers.edu)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js"></script>
+<script src="https://www.jvcasillas.com/ru_xaringan/js/ru_xaringan.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
       }
-    });
-  </script>
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-  </script> -->
-  
-<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="../../site_libs/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
 </script>
-
-  
-  <script>  
-  $(function (){ 
-    $("#example").popover(); 
-    $("[rel='tooltip']").tooltip(); 
-  });  
-  </script>  
-  <!-- LOAD HIGHLIGHTER JS FILES -->
-  <script src="../../site_libs/highlighters/highlight.js/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
-   
-  </html>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
