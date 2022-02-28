@@ -1,16 +1,26 @@
+# Easy plot
+#
+# This script will take a sound object and textgrid
+# and generate a simple plot of the spectrogram and 
+# textgrid (no waveform). 
+# The textgrid should only have 1 tier.
+#
+# Author: Joseph V. Casillas
+# Last update: 02-27-2022
+#
 
 # Did you select a sound?
 beginPause ("Plot sound file")
-	comment ("Make sure you select the sound file you would like to plot.")
+	comment ("Make sure you select the sound file and corresponding textgrid that you would like to plot.")
 clicked = endPause ("Cancel", "Next", 2, 1)
 if clicked = 1
 	exit The plot was not created
 endif
 
 
-
 Erase all
 
+Font size: 12
 sound = selected ("Sound")
 name$ = selected$("Sound")
 textgrid = selected ("TextGrid")

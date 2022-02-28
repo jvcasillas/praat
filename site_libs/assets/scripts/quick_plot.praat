@@ -1,7 +1,7 @@
 ###############################################################################
 # Quick plotter                                                               #
 # Joseph V. Casillas                                                          #
-# 11/08/2016                                                                  #
+# Last update: 11/08/2016                                                     #
 #                                                                             #
 # Overview                                                                    #
 # - This script provides a quick and dirty way to create a quality plot of a  #
@@ -19,7 +19,7 @@
 
 # Did you select a sound?
 beginPause ("Plot sound file")
-	comment ("Make sure you select the sound file you would like to plot.")
+	comment ("Make sure you select the sound file you would like to plot (just the sound file).")
 clicked = endPause ("Cancel", "Next", 2, 1)
 if clicked = 1
 	exit The plot was not created

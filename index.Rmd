@@ -5,6 +5,7 @@ author      : 'Joseph V. Casillas, PhD'
 
 ```{r, libs, echo=F, message=F, warning=F}
 library("stringr")
+library("dplyr")
 ```
 
 ## Overview
@@ -60,7 +61,7 @@ writeLines(slide_links[1:keep])
 
 - Coming soon
 
-```{r, eval=TRUE, echo=FALSE, cache=FALSE}
+```{r, eval=TRUE, echo=FALSE, cache=FALSE, message=F, warning=F}
 library(RefManageR)
 bib <- ReadBib("./site_libs/assets/refs/phon340bib.bib", check = FALSE)
 ```
