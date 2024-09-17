@@ -1,0 +1,14 @@
+/Users/casillas/academia/research/in_progress/empathy_intonation_perc/exp/empathy_intonation_perc/stim/sounds/sounds
+/Users/casillas/academia/research/in_progress/empathy_intonation_perc/exp/empathy_intonation_perc/stim/sounds/textgrids
+/Users/casillas/academia/research/in_progress/empathy_intonation_perc/exp/empathy_intonation_perc/stim/sounds/out
+2
+1
+0
+0
+0
+0
+
+--
+0
+1
+0

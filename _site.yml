@@ -22,5 +22,3 @@ output:
   html_document:
     theme: spacelab
     highlight: textmate
-    include:
-      after_body: site_libs/includes/after_body.html
